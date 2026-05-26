@@ -1,0 +1,8 @@
+# replication-package-analytics dependencies
+anthropic>=0.40.0
+requests>=2.31.0
+pyyaml>=6.0
+# tree-sitter and bindings for AST parsing where available
+# (skill falls back to regex if these are missing)
+tree-sitter>=0.21.0
+tree-sitter-python>=0.21.0

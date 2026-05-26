@@ -1,0 +1,16 @@
+[
+  {
+    "estimand": "ATT(g,t)",
+    "design": "parallel trends with not-yet-treated comparison + no anticipation",
+    "estimator_name": "Callaway-Sant'Anna doubly-robust",
+    "estimator_canonical_citation": "Callaway & Sant'Anna 2021 JoE (10.1016/j.jeconom.2020.12.001)",
+    "assumptions_named": [
+      "Assumption 3 (Limited Treatment Anticipation)",
+      "Assumption 4 (Conditional Parallel Trends, never-treated)",
+      "Assumption 5 (Conditional Parallel Trends, not-yet-treated)"
+    ],
+    "role": "main",
+    "section_evidence": "sec-2-4",
+    "confidence": 0.94
+  }
+]

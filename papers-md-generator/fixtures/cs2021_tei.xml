@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Difference-in-differences with multiple time periods</title>
+      </titleStmt>
+      <sourceDesc>
+        <biblStruct>
+          <analytic>
+            <author>
+              <persName>
+                <forename>Brantly</forename>
+                <surname>Callaway</surname>
+              </persName>
+            </author>
+            <author>
+              <persName>
+                <forename>Pedro H. C.</forename>
+                <surname>Sant'Anna</surname>
+              </persName>
+            </author>
+            <idno type="DOI">10.1016/j.jeconom.2020.12.001</idno>
+          </analytic>
+          <monogr>
+            <title level="j">Journal of Econometrics</title>
+            <imprint>
+              <biblScope unit="volume">225</biblScope>
+              <biblScope unit="issue">2</biblScope>
+              <biblScope unit="page" from="200" to="230"/>
+              <date type="published" when="2021"/>
+            </imprint>
+          </monogr>
+        </biblStruct>
+      </sourceDesc>
+    </fileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <div type="introduction" xml:id="sec-1">
+        <head>1. Introduction</head>
+        <p>We propose three different types of DiD estimands in staggered treatment adoption setups: one based on outcome regressions, one based on inverse probability weighting, and one based on doubly-robust methods. To the best of our knowledge, this paper is the first to show how one can allow for covariate-specific trends across groups in DiD setups with variation in treatment timing. The identification step of the analysis provides a blueprint for the other steps. In this paper, we pay particular attention to the disaggregated causal parameter that we call the group-time average treatment effect, i.e., the average treatment effect for group g at time t, where a group is defined by the time period when units are first treated. In the canonical DiD setup with two periods and two groups, these parameters reduce to the ATT which is typically the parameter of interest in that setup. We provide sufficient conditions related to treatment anticipation behavior and conditional parallel trends under which these group-time average treatment effects are nonparametrically point-identified. We provide ways to aggregate the potentially large number of group-time average treatment effects into a variety of intuitive summary parameters and discuss specific aggregation schemes that can be used to highlight different sources of treatment effect heterogeneity across groups and time periods.</p>
+      </div>
+      <div type="methods" xml:id="sec-2">
+        <head>2. Identification</head>
+        <div xml:id="sec-2-2">
+          <head>2.2 Group-Time Average Treatment Effect Parameter</head>
+          <p>The building block of our framework for staggered DiD is the group-time average treatment effect ATT(g,t). ATT(g,t) is the average treatment effect for units who are members of a particular group g at a particular time period t. We define a group g by the time period when units are first treated. In the canonical two-period two-group DiD setup, ATT(g,t) reduces to the conventional ATT. Importantly, ATT(g,t) does not directly restrict heterogeneity with respect to observed covariates, the period in which units are first treated, or the evolution of treatment effects over time.</p>
+        </div>
+        <div xml:id="sec-2-3">
+          <head>2.3 Identifying assumptions</head>
+          <p>In order to identify the ATT(g,t) and their functionals, we impose the following assumptions.</p>
+          <p>Assumption 3 (Limited Treatment Anticipation). There is a known delta greater than or equal to 0 such that the expectation of Y_t(g) conditional on X and group g equals the expectation of Y_t(0) conditional on X and group g almost surely for all g and t such that t is less than g minus delta. Assumption 3 restricts anticipation of the treatment for all eventually treated groups. When delta equals 0, it imposes a no-anticipation assumption.</p>
+          <p>Assumption 4 (Conditional Parallel Trends Based on a Never-Treated Group). Let delta be as defined in Assumption 3. For each g and t such that t is at least g minus delta, the conditional expectation of the change in Y_t(0) given X and group g equals the conditional expectation of the change in Y_t(0) given X and the never-treated indicator.</p>
+          <p>Assumption 5 (Conditional Parallel Trends Based on Not-Yet-Treated Groups). Let delta be as defined in Assumption 3. For each g and each pair (s,t) such that t is at least g minus delta and t plus delta is at most s less than g-bar, the conditional expectation of the change in Y_t(0) given X and group g equals the conditional expectation of the change in Y_t(0) given X, D_s equals 0, and G_g equals 0. Assumption 5 imposes conditional parallel trends between group g and groups that are not-yet-treated by time t plus delta.</p>
+          <p>Assumptions 4 and 5 are two different conditional parallel trends assumptions that generalize the two-period parallel trends assumption to the case where there are multiple time periods and multiple treatment groups.</p>
+        </div>
+        <div xml:id="sec-2-4">
+          <head>2.4 Identification of ATT(g,t)</head>
+          <p>We provide three identification results that motivate three different DiD estimands. Theorem 1 shows that under Assumptions 1 through 3 and 6, together with either Assumption 4 or Assumption 5, ATT(g,t) is nonparametrically point-identified and admits inverse probability weighting, outcome regression, and doubly-robust representations. The doubly-robust estimator for ATT(g,t) uses a propensity score p_g(X) and an outcome regression m_{g,t,delta}(X); it is consistent if either the propensity model or the outcome model is correctly specified.</p>
+          <p>The doubly-robust identifying functional in Equation 2.4 uses the never-treated comparison group; the not-yet-treated version is given in Equation 2.7. This is what we call the Callaway-Sant'Anna doubly-robust estimator.</p>
+        </div>
+      </div>
+      <div type="aggregation" xml:id="sec-3">
+        <head>3. Summarizing Group-Time Average Treatment Effects</head>
+        <p>We consider four aggregation schemes: event-time (theta_es by length of exposure ell), group-specific (theta_g by treatment cohort), calendar-time (theta_c by calendar period), and overall (theta_O as a single weighted-average parameter).</p>
+      </div>
+      <div type="conclusion" xml:id="sec-6">
+        <head>6. Conclusion</head>
+        <p>This paper formalizes the staggered DiD setup with multiple time periods and multiple treatment groups.</p>
+      </div>
+    </body>
+    <back>
+      <div type="references">
+        <listBibl>
+          <biblStruct>
+            <analytic>
+              <title type="main">Estimation of average treatment effects on the treated</title>
+              <author><persName><forename>Alberto</forename><surname>Abadie</surname></persName></author>
+            </analytic>
+            <monogr>
+              <title level="j">Review of Economic Studies</title>
+              <imprint><date when="2005"/></imprint>
+            </monogr>
+          </biblStruct>
+          <biblStruct>
+            <analytic>
+              <title type="main">Doubly robust difference-in-differences estimators</title>
+              <author><persName><forename>Pedro H. C.</forename><surname>Sant'Anna</surname></persName></author>
+              <author><persName><forename>Jun</forename><surname>Zhao</surname></persName></author>
+              <idno type="DOI">10.1016/j.jeconom.2020.06.003</idno>
+            </analytic>
+            <monogr>
+              <title level="j">Journal of Econometrics</title>
+              <imprint><date when="2020"/></imprint>
+            </monogr>
+          </biblStruct>
+          <biblStruct>
+            <analytic>
+              <title type="main">Estimating dynamic treatment effects in event studies with heterogeneous treatment effects</title>
+              <author><persName><forename>Liyang</forename><surname>Sun</surname></persName></author>
+              <author><persName><forename>Sarah</forename><surname>Abraham</surname></persName></author>
+              <idno type="DOI">10.1016/j.jeconom.2020.09.006</idno>
+            </analytic>
+            <monogr>
+              <title level="j">Journal of Econometrics</title>
+              <imprint><date when="2021"/></imprint>
+            </monogr>
+          </biblStruct>
+        </listBibl>
+      </div>
+    </back>
+  </text>
+</TEI>

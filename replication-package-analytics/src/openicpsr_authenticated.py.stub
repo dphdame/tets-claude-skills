@@ -1,0 +1,68 @@
+"""
+openicpsr_authenticated.py.stub  — CAP-06 v0.2 PLACEHOLDER
+
+Path B authenticated downloader. Activate by renaming to
+`openicpsr_authenticated.py` and implementing the methods below once
+Victoria provides openICPSR account credentials.
+
+Interface contract (Path B drop-in):
+
+    class OpenICPSRClient:
+        def __init__(self, email: str, password: str, cache_dir: Path): ...
+        def login(self) -> None: ...
+        def download_package(self, project_id: str) -> Path: ...
+        # returns path to unzipped package root, usable directly by
+        # static_analyzer.analyze_package(..., package_root=path)
+
+Implementation notes (DO NOT REMOVE; v0.2 engineer reads this first):
+
+1. AUTHENTICATION
+   openICPSR uses a session-cookie auth flow gated by Cloudflare. The login
+   form POSTs to /openicpsr/auth/login with email+password+CSRF token. CSRF
+   is in a hidden input on the login page. After successful login, the
+   session cookie `openicpsr_session` carries auth for ~24h.
+
+   Set the User-Agent string from replication-config-v1.yaml.
+
+2. DOWNLOAD
+   Project pages expose a ZIP download URL at
+   /openicpsr/project/{pid}/version/V1/download. Authenticated GET returns
+   the archive; Content-Disposition gives the filename. Stream to disk.
+
+3. RATE LIMIT
+   Honor 30 requests/min, 4 concurrent (yaml: crawl.openicpsr).
+   Backoff [2,10,30]s on 429. Hard-cap retries at 3.
+
+4. UNZIP
+   `zipfile.ZipFile.extractall(cache_dir / project_id / "unzipped")`.
+   Recurse one level on nested zips. Cap at unzip_recursion_depth=3 and
+   max_package_size_mb=2048 from yaml.
+
+5. ERROR SURFACE
+   Failures must produce one of these schema error codes for the v1 record:
+     DOWNLOAD_FAILED | UNZIP_FAILED | FILE_TOO_LARGE | TOO_MANY_FILES
+
+6. SECURITY
+   Credentials MUST live in env vars OPENICPSR_EMAIL / OPENICPSR_PASSWORD
+   (or a .env in skill/ that is .gitignored). Never log the password. Never
+   commit the session cookie.
+
+7. THIRD-PARTY OPTIONS TO CONSIDER
+   - playwright-headless if Cloudflare's anti-bot challenge defeats `requests`
+   - cloudscraper as a lighter alternative
+   - ICPSR's bulk-deposit tooling if Victoria can request a research-access agreement
+
+8. v0.1 BEHAVIOR WITHOUT THIS MODULE
+   run_pipeline.py defaults to Path A: README + landing-page metadata only,
+   via wayback_harvester.py. Source-tree metrics are nulled and
+   measurement_notes.general_notes is set to "path_a_no_source_tree".
+
+UPGRADE STEP FOR VICTORIA:
+   1. Provide openICPSR account credentials in skill/.env
+   2. `mv openicpsr_authenticated.py.stub openicpsr_authenticated.py` and
+      implement per the interface above.
+   3. Re-run `python3 src/run_pipeline.py --mode analytic` --
+      run_pipeline.py auto-detects the live module and switches every
+      package to Path B.
+"""
+raise NotImplementedError("openicpsr_authenticated is a v0.2 stub; see module docstring.")

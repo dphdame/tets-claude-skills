@@ -1,0 +1,1755 @@
+{
+  "version": "0.1",
+  "build_date": "2026-05-25T21:04:37.512023+00:00",
+  "build_source": "openalex-only",
+  "spec_reference": "02_content-strategy/CAPABILITY-07-attribution-audit-network.md",
+  "nodes": [
+    {
+      "id": "W3113269512",
+      "doi": "10.1016/j.jeconom.2020.12.001",
+      "title": "Difference-in-Differences with multiple time periods",
+      "year": 2020,
+      "authors": [
+        "Brantly Callaway",
+        "Pedro H. C. Sant\u2019Anna"
+      ],
+      "journal": "Journal of Econometrics",
+      "cited_by_count": 1413,
+      "node_type": "correct_origin"
+    },
+    {
+      "id": "W3112066496",
+      "doi": "10.1016/j.jeconom.2020.09.006",
+      "title": "Estimating dynamic treatment effects in event studies with heterogeneous treatment effects",
+      "year": 2020,
+      "authors": [
+        "Liyang Sun",
+        "Sarah Abraham"
+      ],
+      "journal": "Journal of Econometrics",
+      "cited_by_count": 4639,
+      "node_type": "wrong_credit"
+    },
+    {
+      "id": "W2791859701",
+      "doi": "10.1016/j.jeconom.2021.03.014",
+      "title": "Difference-in-differences with variation in treatment timing",
+      "year": 2021,
+      "authors": [
+        "Andrew Goodman-Bacon"
+      ],
+      "journal": null,
+      "cited_by_count": 0,
+      "node_type": "citing"
+    },
+    {
+      "id": "W4283387379",
+      "doi": "10.1016/j.jfineco.2022.01.004",
+      "title": "How much should we trust staggered difference-in-differences estimates?",
+      "year": 2022,
+      "authors": [
+        "Andrew C. Baker",
+        "David F. Larcker",
+        "Charles C. Y. Wang"
+      ],
+      "journal": null,
+      "cited_by_count": 0,
+      "node_type": "citing"
+    },
+    {
+      "id": "W3196836501",
+      "doi": "10.1093/restud/rdae007",
+      "title": "Revisiting Event-Study Designs: Robust and Efficient Estimation",
+      "year": 2024,
+      "authors": [
+        "Kirill Borusyak",
+        "Xavier Jaravel",
+        "Jann Spiess"
+      ],
+      "journal": null,
+      "cited_by_count": 0,
+      "node_type": "citing"
+    },
+    {
+      "id": "W4367396771",
+      "doi": "10.1016/j.jeconom.2023.03.008",
+      "title": "What\u2019s trending in difference-in-differences? A synthesis of the recent econometrics literature",
+      "year": 2023,
+      "authors": [
+        "Jonathan Roth",
+        "Pedro H. C. Sant\u2019Anna",
+        "Alyssa Bilinski",
+        "John Poe"
+      ],
+      "journal": null,
+      "cited_by_count": 0,
+      "node_type": "citing"
+    },
+    {
+      "id": "W4320855218",
+      "doi": "10.1093/restud/rdad018",
+      "title": "A More Credible Approach to Parallel Trends",
+      "year": 2023,
+      "authors": [
+        "Ashesh Rambachan",
+        "Jonathan Roth"
+      ],
+      "journal": null,
+      "cited_by_count": 0,
+      "node_type": "citing"
+    },
+    {
+      "id": "W4293761886",
+      "doi": "10.1257/aeri.20210236",
+      "title": "Pretest with Caution: Event-Study Estimates after Testing for Parallel Trends",
+      "year": 2022,
+      "authors": [
+        "Jonathan Roth"
+      ],
+      "journal": null,
+      "cited_by_count": 0,
+      "node_type": "citing"
+    },
+    {
+      "id": "W4307559973",
+      "doi": "10.1257/aer.20211218",
+      "title": "Social Media and Mental Health",
+      "year": 2022,
+      "authors": [
+        "Luca Braghieri",
+        "Roee Levy",
+        "Alexey Makarin"
+      ],
+      "journal": null,
+      "cited_by_count": 0,
+      "node_type": "citing"
+    },
+    {
+      "id": "W4293198822",
+      "doi": "10.1093/ectj/utac017",
+      "title": "Two-way fixed effects and differences-in-differences with heterogeneous treatment effects: a survey",
+      "year": 2022,
+      "authors": [
+        "Cl\u00e9ment de Chaisemartin",
+        "Xavier D\u2019Haultf\u0153uille"
+      ],
+      "journal": null,
+      "cited_by_count": 0,
+      "node_type": "citing"
+    },
+    {
+      "id": "W4407142724",
+      "doi": "10.1093/qje/qjae044",
+      "title": "Generative AI at Work",
+      "year": 2025,
+      "authors": [
+        "Erik Brynjolfsson",
+        "Danielle Li",
+        "Lindsey Raymond"
+      ],
+      "journal": null,
+      "cited_by_count": 0,
+      "node_type": "citing"
+    },
+    {
+      "id": "W3182501931",
+      "doi": "10.1111/ajps.12723",
+      "title": "A Practical Guide to Counterfactual Estimators for Causal Inference with Time\u2010Series Cross\u2010Sectional Data",
+      "year": 2022,
+      "authors": [
+        "Licheng Liu",
+        "Ye Wang",
+        "Yiqing Xu"
+      ],
+      "journal": null,
+      "cited_by_count": 0,
+      "node_type": "citing"
+    },
+    {
+      "id": "W4399688201",
+      "doi": "10.1111/1475-679x.12559",
+      "title": "Using and Interpreting Fixed Effects Models",
+      "year": 2024,
+      "authors": [
+        "Matthias Breuer",
+        "Ed deHaan"
+      ],
+      "journal": null,
+      "cited_by_count": 0,
+      "node_type": "citing"
+    },
+    {
+      "id": "W3152318151",
+      "doi": "10.1093/qje/qjab026",
+      "title": "Flexible Wages, Bargaining, and the Gender Gap",
+      "year": 2021,
+      "authors": [
+        "Barbara Biasi",
+        "Heather Sarsons"
+      ],
+      "journal": null,
+      "cited_by_count": 0,
+      "node_type": "citing"
+    },
+    {
+      "id": "W3021117736",
+      "doi": "10.1111/ecin.12944",
+      "title": "WHEN DO SHELTER\u2010IN\u2010PLACE ORDERS FIGHT COVID\u201019 BEST? POLICY HETEROGENEITY ACROSS STATES AND ADOPTION TIME",
+      "year": 2020,
+      "authors": [
+        "Dhaval Dave",
+        "Andrew Friedson",
+        "Kyutaro Matsuzawa",
+        "Joseph J. Sabia"
+      ],
+      "journal": null,
+      "cited_by_count": 0,
+      "node_type": "citing"
+    },
+    {
+      "id": "W2944728643",
+      "doi": "10.1093/qje/qjab004",
+      "title": "Medicaid and Mortality: New Evidence From Linked Survey and Administrative Data",
+      "year": 2021,
+      "authors": [
+        "Sarah Miller",
+        "Norman F. Johnson",
+        "Laura Wherry"
+      ],
+      "journal": null,
+      "cited_by_count": 0,
+      "node_type": "citing"
+    },
+    {
+      "id": "W4213127355",
+      "doi": "10.1016/j.gfs.2022.100620",
+      "title": "Aquaculture: The missing contributor in the food security agenda",
+      "year": 2022,
+      "authors": [
+        "Taryn Garlock",
+        "Frank Asche",
+        "James L. Anderson",
+        "Adams Ceballos\u2010Concha",
+        "David C. Love",
+        "Tonje C. Osmundsen",
+        "Ruth Beatriz Mezzalira Pincinato"
+      ],
+      "journal": null,
+      "cited_by_count": 0,
+      "node_type": "citing"
+    },
+    {
+      "id": "W3084051484",
+      "doi": "10.1093/qje/qjaa027",
+      "title": "The Effects of Police Violence on Inner-City Students*",
+      "year": 2020,
+      "authors": [
+        "Desmond Ang"
+      ],
+      "journal": null,
+      "cited_by_count": 0,
+      "node_type": "citing"
+    },
+    {
+      "id": "W4327972284",
+      "doi": "10.1016/j.enpol.2023.113527",
+      "title": "Policy incentives, government subsidies, and technological innovation in new energy vehicle enterprises: Evidence from China",
+      "year": 2023,
+      "authors": [
+        "Zhangsheng Jiang",
+        "Chenghao Xu"
+      ],
+      "journal": null,
+      "cited_by_count": 0,
+      "node_type": "citing"
+    },
+    {
+      "id": "W4386173759",
+      "doi": "10.2139/ssrn.4539828",
+      "title": "Using and Interpreting Fixed Effects Models",
+      "year": 2023,
+      "authors": [
+        "Matthias Breuer",
+        "Ed deHaan"
+      ],
+      "journal": null,
+      "cited_by_count": 0,
+      "node_type": "citing"
+    },
+    {
+      "id": "W3125319288",
+      "doi": "10.1002/jae.2971",
+      "title": "On event studies and distributed\u2010lags in two\u2010way fixed effects models: Identification, equivalence, and generalization",
+      "year": 2023,
+      "authors": [
+        "Kurt Schmidheiny",
+        "Sebastian Siegloch"
+      ],
+      "journal": null,
+      "cited_by_count": 0,
+      "node_type": "citing"
+    },
+    {
+      "id": "W3150080251",
+      "doi": "10.1257/aer.20200956",
+      "title": "From Fog to Smog: The Value of Pollution Information",
+      "year": 2024,
+      "authors": [
+        "Panle Jia Barwick",
+        "Shanjun Li",
+        "Liguo Lin",
+        "Eric Zou"
+      ],
+      "journal": null,
+      "cited_by_count": 0,
+      "node_type": "citing"
+    },
+    {
+      "id": "W4386163304",
+      "doi": "10.1093/ectj/utad016",
+      "title": "Simple approaches to nonlinear difference-in-differences with panel\u00a0data",
+      "year": 2023,
+      "authors": [
+        "Jeffrey M. Wooldridge"
+      ],
+      "journal": null,
+      "cited_by_count": 0,
+      "node_type": "citing"
+    },
+    {
+      "id": "W2208550830",
+      "doi": "10.1080/01621459.2017.1319839",
+      "title": "Estimation and Inference of Heterogeneous Treatment Effects using Random Forests",
+      "year": 2017,
+      "authors": [
+        "Stefan Wager",
+        "Susan Athey"
+      ],
+      "journal": "Journal of the American Statistical Association",
+      "cited_by_count": 2734,
+      "node_type": "correct_origin"
+    },
+    {
+      "id": "W2730059782",
+      "doi": "10.1214/18-aos1709",
+      "title": "Generalized random forests",
+      "year": 2019,
+      "authors": [
+        "Susan Athey",
+        "Julie Tibshirani",
+        "Stefan Wager"
+      ],
+      "journal": "The Annals of Statistics",
+      "cited_by_count": 16,
+      "node_type": "wrong_credit"
+    },
+    {
+      "id": "W2803408063",
+      "doi": "10.1175/mwr-d-18-0187.1",
+      "title": "Neural Networks for Postprocessing Ensemble Weather Forecasts",
+      "year": 2018,
+      "authors": [
+        "Stephan Rasp",
+        "Sebastian Lerch"
+      ],
+      "journal": null,
+      "cited_by_count": 0,
+      "node_type": "citing"
+    },
+    {
+      "id": "W3126562619",
+      "doi": "10.1016/j.conengprac.2021.104748",
+      "title": "Remaining useful life prediction for ion etching machine cooling system using deep recurrent neural network-based approaches",
+      "year": 2021,
+      "authors": [
+        "Shimeng Wu",
+        "Yuchen Jiang",
+        "Hao Luo",
+        "Shen Yin"
+      ],
+      "journal": null,
+      "cited_by_count": 0,
+      "node_type": "citing"
+    },
+    {
+      "id": "W2790229702",
+      "doi": "10.48550/arxiv.1803.07164",
+      "title": "Adversarial Generalized Method of Moments",
+      "year": 2018,
+      "authors": [
+        "Greg Lewis",
+        "Vasilis Syrgkanis"
+      ],
+      "journal": null,
+      "cited_by_count": 0,
+      "node_type": "citing"
+    },
+    {
+      "id": "W2888746460",
+      "doi": "10.48550/arxiv.1808.07573",
+      "title": "Approximation Trees: Statistical Stability in Model Distillation",
+      "year": 2018,
+      "authors": [
+        "Yichen Zhou",
+        "Zhengze Zhou",
+        "Giles Hooker"
+      ],
+      "journal": null,
+      "cited_by_count": 0,
+      "node_type": "citing"
+    },
+    {
+      "id": "W2810481873",
+      "doi": "10.48550/arxiv.1806.09762",
+      "title": "Boulevard: Regularized Stochastic Gradient Boosted Trees and Their Limiting Distribution",
+      "year": 2018,
+      "authors": [
+        "Yichen Zhou",
+        "Giles Hooker"
+      ],
+      "journal": null,
+      "cited_by_count": 0,
+      "node_type": "citing"
+    },
+    {
+      "id": "W3119153467",
+      "doi": "10.47004/wp.cem.2021.0720",
+      "title": "Adversarial estimation of Riesz representers",
+      "year": 2021,
+      "authors": [
+        "Victor Chernozhukov",
+        "Whitney K. Newey",
+        "Rahul Singh",
+        "Vasilis Syrgkanis"
+      ],
+      "journal": null,
+      "cited_by_count": 0,
+      "node_type": "citing"
+    },
+    {
+      "id": "W3040933309",
+      "doi": "10.48550/arxiv.1904.04276",
+      "title": "On nearly assumption-free tests of nominal confidence interval coverage for causal parameters estimated by machine learning",
+      "year": 2019,
+      "authors": [
+        "Lin Liu",
+        "Rajarshi Mukherjee",
+        "James M. Robins"
+      ],
+      "journal": null,
+      "cited_by_count": 0,
+      "node_type": "citing"
+    },
+    {
+      "id": "W2787834738",
+      "doi": "10.1080/01621459.2023.2177545",
+      "title": "Solving Estimating Equations With Copulas",
+      "year": 2023,
+      "authors": [
+        "Thomas Nagler",
+        "Thibault Vatter"
+      ],
+      "journal": null,
+      "cited_by_count": 0,
+      "node_type": "citing"
+    },
+    {
+      "id": "W3004159948",
+      "doi": "10.48550/arxiv.2001.10102",
+      "title": "Predicting Regression Probability Distributions with Imperfect Data Through Optimal Transformations",
+      "year": 2020,
+      "authors": [
+        "Jerome H. Friedman"
+      ],
+      "journal": null,
+      "cited_by_count": 0,
+      "node_type": "citing"
+    },
+    {
+      "id": "W2793016512",
+      "doi": "10.48550/arxiv.1803.05112",
+      "title": "Uplift Modeling from Separate Labels",
+      "year": 2018,
+      "authors": [
+        "Ikko Yamane",
+        "Florian Yger",
+        "Jamal Atif",
+        "Masashi Sugiyama"
+      ],
+      "journal": null,
+      "cited_by_count": 0,
+      "node_type": "citing"
+    },
+    {
+      "id": "W3110188735",
+      "doi": "10.1002/sta4.331",
+      "title": "Modern multiple imputation with functional data",
+      "year": 2020,
+      "authors": [
+        "Aniruddha Rajendra Rao",
+        "Matthew Reimherr"
+      ],
+      "journal": null,
+      "cited_by_count": 0,
+      "node_type": "citing"
+    },
+    {
+      "id": "W2176150731",
+      "doi": "10.3982/ecta14434",
+      "title": "Optimal Inference in a Class of Regression Models",
+      "year": 2018,
+      "authors": [
+        "Timothy B. Armstrong",
+        "Michal Koles\u00e1r"
+      ],
+      "journal": "Econometrica",
+      "cited_by_count": 92,
+      "node_type": "correct_origin"
+    },
+    {
+      "id": "W4389773814",
+      "doi": "10.1093/qje/qjad054",
+      "title": "Logs with Zeros? Some Problems and Solutions",
+      "year": 2023,
+      "authors": [
+        "Jiafeng Chen",
+        "Jonathan Roth"
+      ],
+      "journal": null,
+      "cited_by_count": 0,
+      "node_type": "citing"
+    },
+    {
+      "id": "W4382009268",
+      "doi": "10.1257/jep.37.2.203",
+      "title": "An Introductory Guide to Event Study Models",
+      "year": 2023,
+      "authors": [
+        "Douglas L. Miller"
+      ],
+      "journal": null,
+      "cited_by_count": 0,
+      "node_type": "citing"
+    },
+    {
+      "id": "W2899541594",
+      "doi": "10.2139/ssrn.3267041",
+      "title": "Cryptocurrency Pump-and-Dump Schemes",
+      "year": 2018,
+      "authors": [
+        "Tao Li",
+        "Donghwa Shin",
+        "Baolian Wang"
+      ],
+      "journal": null,
+      "cited_by_count": 0,
+      "node_type": "citing"
+    },
+    {
+      "id": "W4398764704",
+      "doi": "10.1093/restud/rdae055",
+      "title": "Does Pricing Carbon Mitigate Climate Change? Firm-Level Evidence from the European Union Emissions Trading System",
+      "year": 2024,
+      "authors": [
+        "Jonathan Colmer",
+        "Ralf Martin",
+        "Mirabelle Mu\u00fbls",
+        "Ulrich J. Wagner"
+      ],
+      "journal": null,
+      "cited_by_count": 0,
+      "node_type": "citing"
+    },
+    {
+      "id": "W3046479494",
+      "doi": "10.2139/ssrn.3571164",
+      "title": "On Event Studies and Distributed-Lags in Two-Way Fixed Effects Models: Identification, Equivalence, and Generalization",
+      "year": 2020,
+      "authors": [
+        "Kurt Schmidheiny",
+        "Sebastian Siegloch"
+      ],
+      "journal": null,
+      "cited_by_count": 0,
+      "node_type": "citing"
+    },
+    {
+      "id": "W2989928112",
+      "doi": "10.1002/sim.70296",
+      "title": "Nothing to See Here? A Non\u2010Inferiority Approach to Parallel Trends",
+      "year": 2026,
+      "authors": [
+        "Alyssa Bilinski",
+        "Laura A. Hatfield"
+      ],
+      "journal": null,
+      "cited_by_count": 0,
+      "node_type": "citing"
+    },
+    {
+      "id": "W4310355212",
+      "doi": "10.1016/j.jpubeco.2022.104786",
+      "title": "Do environmental markets cause environmental injustice? Evidence from California\u2019s carbon market",
+      "year": 2022,
+      "authors": [
+        "Danae Hern\u00e1ndez-Cort\u00e9s",
+        "Kyle C. Meng"
+      ],
+      "journal": null,
+      "cited_by_count": 0,
+      "node_type": "citing"
+    },
+    {
+      "id": "W4400349012",
+      "doi": "10.1097/ede.0000000000001755",
+      "title": "Advances in Difference-in-differences Methods for Policy Evaluation Research",
+      "year": 2024,
+      "authors": [
+        "Guangyi Wang",
+        "Rita Hamad",
+        "Justin S. White"
+      ],
+      "journal": null,
+      "cited_by_count": 0,
+      "node_type": "citing"
+    },
+    {
+      "id": "W4405761686",
+      "doi": "10.1177/1536867x241297914",
+      "title": "On synthetic difference-in-differences and related estimation methods in Stata",
+      "year": 2024,
+      "authors": [
+        "Damian Clarke",
+        "Daniel Paila\u00f1ir",
+        "Susan Athey",
+        "Guido W. Imbens"
+      ],
+      "journal": null,
+      "cited_by_count": 0,
+      "node_type": "citing"
+    },
+    {
+      "id": "W4391246671",
+      "doi": "10.1146/annurev-publhealth-061022-050825",
+      "title": "Designing Difference-in-Difference Studies with Staggered Treatment Adoption: Key Concepts and Practical Guidelines",
+      "year": 2024,
+      "authors": [
+        "Coady Wing",
+        "Madeline Yozwiak",
+        "Alex Hollingsworth",
+        "Seth Freedman",
+        "Kosali Simon"
+      ],
+      "journal": null,
+      "cited_by_count": 0,
+      "node_type": "citing"
+    },
+    {
+      "id": "W4378894993",
+      "doi": "10.1016/j.jue.2023.103555",
+      "title": "The impact of upzoning on housing construction in Auckland",
+      "year": 2023,
+      "authors": [
+        "Ryan Greenaway\u2010McGrevy",
+        "Peter C.B. Phillips"
+      ],
+      "journal": null,
+      "cited_by_count": 0,
+      "node_type": "citing"
+    },
+    {
+      "id": "W3035452373",
+      "doi": "10.2139/ssrn.3604360",
+      "title": "Does Private Equity Ownership Make Firms Cleaner? The Role Of Environmental Liability Risks",
+      "year": 2020,
+      "authors": [
+        "Aymeric Bellon"
+      ],
+      "journal": null,
+      "cited_by_count": 0,
+      "node_type": "citing"
+    },
+    {
+      "id": "W4405774612",
+      "doi": "10.1016/j.eneco.2024.108153",
+      "title": "Supply chain digitalization, green technology innovation and corporate energy efficiency",
+      "year": 2024,
+      "authors": [
+        "Zhiyi Li",
+        "Bin Hu",
+        "Yifei Bao",
+        "Yifei Wang"
+      ],
+      "journal": null,
+      "cited_by_count": 0,
+      "node_type": "citing"
+    },
+    {
+      "id": "W4413754779",
+      "doi": "10.1007/s00181-025-02807-z",
+      "title": "Two-way fixed effects, the two-way mundlak regression, and difference-in-differences estimators",
+      "year": 2025,
+      "authors": [
+        "Jeffrey M. Wooldridge"
+      ],
+      "journal": null,
+      "cited_by_count": 0,
+      "node_type": "citing"
+    },
+    {
+      "id": "W3026574757",
+      "doi": "10.3386/w27205",
+      "title": "Do Environmental Markets Cause Environmental Injustice? Evidence from California's Carbon Market",
+      "year": 2020,
+      "authors": [
+        "Danae Hern\u00e1ndez-Cort\u00e9s",
+        "Kyle C. Meng"
+      ],
+      "journal": null,
+      "cited_by_count": 0,
+      "node_type": "citing"
+    },
+    {
+      "id": "W4407667415",
+      "doi": "10.1016/j.scs.2025.106228",
+      "title": "Digital infrastructure construction and urban industrial chain resilience: Evidence from the \u201cBroadband China\u201d strategy",
+      "year": 2025,
+      "authors": [
+        "Yi Chen",
+        "Cailou Jiang",
+        "Lin Peng",
+        "Shuang Zhao",
+        "Cheng Chen"
+      ],
+      "journal": null,
+      "cited_by_count": 0,
+      "node_type": "citing"
+    },
+    {
+      "id": "W4408954264",
+      "doi": "10.1016/j.irfa.2025.104179",
+      "title": "The impact of intellectual property protection on the development of artificial intelligence in enterprises",
+      "year": 2025,
+      "authors": [
+        "Qifeng Han",
+        "Chunhui Li",
+        "Yulu Jin"
+      ],
+      "journal": null,
+      "cited_by_count": 0,
+      "node_type": "citing"
+    },
+    {
+      "id": "W4388806290",
+      "doi": "10.1016/j.jbankfin.2023.107053",
+      "title": "Stock market liberalization and corporate investment revisited: Evidence from China",
+      "year": 2023,
+      "authors": [
+        "Zhisheng Li",
+        "Chun Liu",
+        "Xiaoran Ni",
+        "Jiaren Pang"
+      ],
+      "journal": null,
+      "cited_by_count": 0,
+      "node_type": "citing"
+    },
+    {
+      "id": "W4210820253",
+      "doi": "10.2139/ssrn.3987541",
+      "title": "The Supply and Demand for Data Privacy: Evidence from Mobile Apps",
+      "year": 2021,
+      "authors": [
+        "Bo Bian",
+        "Xinchen Ma",
+        "Huan Tang"
+      ],
+      "journal": null,
+      "cited_by_count": 0,
+      "node_type": "citing"
+    },
+    {
+      "id": "W4400177023",
+      "doi": "10.1093/ectj/utae014",
+      "title": "Causal models for longitudinal and panel data: a survey",
+      "year": 2024,
+      "authors": [
+        "Dmitry Arkhangelsky",
+        "Guido W. Imbens"
+      ],
+      "journal": null,
+      "cited_by_count": 0,
+      "node_type": "citing"
+    },
+    {
+      "id": "W4410255654",
+      "doi": "10.1016/j.irfa.2025.104330",
+      "title": "Artificial intelligence and green transformation of manufacturing enterprises",
+      "year": 2025,
+      "authors": [
+        "Chaobo Zhou",
+        "Haikuo Zhang",
+        "Ji Ying",
+        "Shouchao He",
+        "Chong Zhang",
+        "Jiale Yan"
+      ],
+      "journal": null,
+      "cited_by_count": 0,
+      "node_type": "citing"
+    }
+  ],
+  "edges": [
+    {
+      "source": "W2791859701",
+      "target": "W3112066496",
+      "edge_type": "mis-cites",
+      "weight": 0.5,
+      "catalog_entry_id": "cs-not-yet-treated-mis-credited-to-sa",
+      "method": "not-yet-treated comparison group under conditional parallel trends",
+      "confidence": "candidate-low",
+      "evidence": {
+        "citing_paper_reference_count_total": 85,
+        "catalog_confidence_level": "consensus",
+        "v0_1_method": "openalex-bibliography-membership-only",
+        "next_step_for_confirmation": "LLM methods-section extraction (CAP-05) on citing paper's full text. If estimator-use of `not-yet-treated comparison group under conditional parallel trends` is confirmed AND self-consistency gate passes, upgrade to confidence=confirmed."
+      }
+    },
+    {
+      "source": "W4283387379",
+      "target": "W3112066496",
+      "edge_type": "mis-cites",
+      "weight": 0.5,
+      "catalog_entry_id": "cs-not-yet-treated-mis-credited-to-sa",
+      "method": "not-yet-treated comparison group under conditional parallel trends",
+      "confidence": "candidate-low",
+      "evidence": {
+        "citing_paper_reference_count_total": 28,
+        "catalog_confidence_level": "consensus",
+        "v0_1_method": "openalex-bibliography-membership-only",
+        "next_step_for_confirmation": "LLM methods-section extraction (CAP-05) on citing paper's full text. If estimator-use of `not-yet-treated comparison group under conditional parallel trends` is confirmed AND self-consistency gate passes, upgrade to confidence=confirmed."
+      }
+    },
+    {
+      "source": "W3196836501",
+      "target": "W3112066496",
+      "edge_type": "mis-cites",
+      "weight": 0.5,
+      "catalog_entry_id": "cs-not-yet-treated-mis-credited-to-sa",
+      "method": "not-yet-treated comparison group under conditional parallel trends",
+      "confidence": "candidate-low",
+      "evidence": {
+        "citing_paper_reference_count_total": 34,
+        "catalog_confidence_level": "consensus",
+        "v0_1_method": "openalex-bibliography-membership-only",
+        "next_step_for_confirmation": "LLM methods-section extraction (CAP-05) on citing paper's full text. If estimator-use of `not-yet-treated comparison group under conditional parallel trends` is confirmed AND self-consistency gate passes, upgrade to confidence=confirmed."
+      }
+    },
+    {
+      "source": "W4367396771",
+      "target": "W3112066496",
+      "edge_type": "mis-cites",
+      "weight": 0.5,
+      "catalog_entry_id": "cs-not-yet-treated-mis-credited-to-sa",
+      "method": "not-yet-treated comparison group under conditional parallel trends",
+      "confidence": "candidate-low",
+      "evidence": {
+        "citing_paper_reference_count_total": 110,
+        "catalog_confidence_level": "consensus",
+        "v0_1_method": "openalex-bibliography-membership-only",
+        "next_step_for_confirmation": "LLM methods-section extraction (CAP-05) on citing paper's full text. If estimator-use of `not-yet-treated comparison group under conditional parallel trends` is confirmed AND self-consistency gate passes, upgrade to confidence=confirmed."
+      }
+    },
+    {
+      "source": "W3113269512",
+      "target": "W3112066496",
+      "edge_type": "mis-cites",
+      "weight": 0.5,
+      "catalog_entry_id": "cs-not-yet-treated-mis-credited-to-sa",
+      "method": "not-yet-treated comparison group under conditional parallel trends",
+      "confidence": "candidate-low",
+      "evidence": {
+        "citing_paper_reference_count_total": 83,
+        "catalog_confidence_level": "consensus",
+        "v0_1_method": "openalex-bibliography-membership-only",
+        "next_step_for_confirmation": "LLM methods-section extraction (CAP-05) on citing paper's full text. If estimator-use of `not-yet-treated comparison group under conditional parallel trends` is confirmed AND self-consistency gate passes, upgrade to confidence=confirmed."
+      }
+    },
+    {
+      "source": "W4320855218",
+      "target": "W3112066496",
+      "edge_type": "mis-cites",
+      "weight": 0.5,
+      "catalog_entry_id": "cs-not-yet-treated-mis-credited-to-sa",
+      "method": "not-yet-treated comparison group under conditional parallel trends",
+      "confidence": "candidate-low",
+      "evidence": {
+        "citing_paper_reference_count_total": 68,
+        "catalog_confidence_level": "consensus",
+        "v0_1_method": "openalex-bibliography-membership-only",
+        "next_step_for_confirmation": "LLM methods-section extraction (CAP-05) on citing paper's full text. If estimator-use of `not-yet-treated comparison group under conditional parallel trends` is confirmed AND self-consistency gate passes, upgrade to confidence=confirmed."
+      }
+    },
+    {
+      "source": "W4293761886",
+      "target": "W3112066496",
+      "edge_type": "mis-cites",
+      "weight": 0.5,
+      "catalog_entry_id": "cs-not-yet-treated-mis-credited-to-sa",
+      "method": "not-yet-treated comparison group under conditional parallel trends",
+      "confidence": "candidate-low",
+      "evidence": {
+        "citing_paper_reference_count_total": 53,
+        "catalog_confidence_level": "consensus",
+        "v0_1_method": "openalex-bibliography-membership-only",
+        "next_step_for_confirmation": "LLM methods-section extraction (CAP-05) on citing paper's full text. If estimator-use of `not-yet-treated comparison group under conditional parallel trends` is confirmed AND self-consistency gate passes, upgrade to confidence=confirmed."
+      }
+    },
+    {
+      "source": "W4307559973",
+      "target": "W3112066496",
+      "edge_type": "mis-cites",
+      "weight": 0.5,
+      "catalog_entry_id": "cs-not-yet-treated-mis-credited-to-sa",
+      "method": "not-yet-treated comparison group under conditional parallel trends",
+      "confidence": "candidate-low",
+      "evidence": {
+        "citing_paper_reference_count_total": 64,
+        "catalog_confidence_level": "consensus",
+        "v0_1_method": "openalex-bibliography-membership-only",
+        "next_step_for_confirmation": "LLM methods-section extraction (CAP-05) on citing paper's full text. If estimator-use of `not-yet-treated comparison group under conditional parallel trends` is confirmed AND self-consistency gate passes, upgrade to confidence=confirmed."
+      }
+    },
+    {
+      "source": "W4293198822",
+      "target": "W3112066496",
+      "edge_type": "mis-cites",
+      "weight": 0.5,
+      "catalog_entry_id": "cs-not-yet-treated-mis-credited-to-sa",
+      "method": "not-yet-treated comparison group under conditional parallel trends",
+      "confidence": "candidate-low",
+      "evidence": {
+        "citing_paper_reference_count_total": 68,
+        "catalog_confidence_level": "consensus",
+        "v0_1_method": "openalex-bibliography-membership-only",
+        "next_step_for_confirmation": "LLM methods-section extraction (CAP-05) on citing paper's full text. If estimator-use of `not-yet-treated comparison group under conditional parallel trends` is confirmed AND self-consistency gate passes, upgrade to confidence=confirmed."
+      }
+    },
+    {
+      "source": "W4407142724",
+      "target": "W3112066496",
+      "edge_type": "mis-cites",
+      "weight": 0.5,
+      "catalog_entry_id": "cs-not-yet-treated-mis-credited-to-sa",
+      "method": "not-yet-treated comparison group under conditional parallel trends",
+      "confidence": "candidate-low",
+      "evidence": {
+        "citing_paper_reference_count_total": 75,
+        "catalog_confidence_level": "consensus",
+        "v0_1_method": "openalex-bibliography-membership-only",
+        "next_step_for_confirmation": "LLM methods-section extraction (CAP-05) on citing paper's full text. If estimator-use of `not-yet-treated comparison group under conditional parallel trends` is confirmed AND self-consistency gate passes, upgrade to confidence=confirmed."
+      }
+    },
+    {
+      "source": "W3182501931",
+      "target": "W3112066496",
+      "edge_type": "mis-cites",
+      "weight": 0.5,
+      "catalog_entry_id": "cs-not-yet-treated-mis-credited-to-sa",
+      "method": "not-yet-treated comparison group under conditional parallel trends",
+      "confidence": "candidate-low",
+      "evidence": {
+        "citing_paper_reference_count_total": 49,
+        "catalog_confidence_level": "consensus",
+        "v0_1_method": "openalex-bibliography-membership-only",
+        "next_step_for_confirmation": "LLM methods-section extraction (CAP-05) on citing paper's full text. If estimator-use of `not-yet-treated comparison group under conditional parallel trends` is confirmed AND self-consistency gate passes, upgrade to confidence=confirmed."
+      }
+    },
+    {
+      "source": "W4399688201",
+      "target": "W3112066496",
+      "edge_type": "mis-cites",
+      "weight": 0.5,
+      "catalog_entry_id": "cs-not-yet-treated-mis-credited-to-sa",
+      "method": "not-yet-treated comparison group under conditional parallel trends",
+      "confidence": "candidate-low",
+      "evidence": {
+        "citing_paper_reference_count_total": 77,
+        "catalog_confidence_level": "consensus",
+        "v0_1_method": "openalex-bibliography-membership-only",
+        "next_step_for_confirmation": "LLM methods-section extraction (CAP-05) on citing paper's full text. If estimator-use of `not-yet-treated comparison group under conditional parallel trends` is confirmed AND self-consistency gate passes, upgrade to confidence=confirmed."
+      }
+    },
+    {
+      "source": "W3152318151",
+      "target": "W3112066496",
+      "edge_type": "mis-cites",
+      "weight": 0.5,
+      "catalog_entry_id": "cs-not-yet-treated-mis-credited-to-sa",
+      "method": "not-yet-treated comparison group under conditional parallel trends",
+      "confidence": "candidate-low",
+      "evidence": {
+        "citing_paper_reference_count_total": 71,
+        "catalog_confidence_level": "consensus",
+        "v0_1_method": "openalex-bibliography-membership-only",
+        "next_step_for_confirmation": "LLM methods-section extraction (CAP-05) on citing paper's full text. If estimator-use of `not-yet-treated comparison group under conditional parallel trends` is confirmed AND self-consistency gate passes, upgrade to confidence=confirmed."
+      }
+    },
+    {
+      "source": "W3021117736",
+      "target": "W3112066496",
+      "edge_type": "mis-cites",
+      "weight": 0.5,
+      "catalog_entry_id": "cs-not-yet-treated-mis-credited-to-sa",
+      "method": "not-yet-treated comparison group under conditional parallel trends",
+      "confidence": "candidate-low",
+      "evidence": {
+        "citing_paper_reference_count_total": 29,
+        "catalog_confidence_level": "consensus",
+        "v0_1_method": "openalex-bibliography-membership-only",
+        "next_step_for_confirmation": "LLM methods-section extraction (CAP-05) on citing paper's full text. If estimator-use of `not-yet-treated comparison group under conditional parallel trends` is confirmed AND self-consistency gate passes, upgrade to confidence=confirmed."
+      }
+    },
+    {
+      "source": "W2944728643",
+      "target": "W3112066496",
+      "edge_type": "mis-cites",
+      "weight": 0.5,
+      "catalog_entry_id": "cs-not-yet-treated-mis-credited-to-sa",
+      "method": "not-yet-treated comparison group under conditional parallel trends",
+      "confidence": "candidate-low",
+      "evidence": {
+        "citing_paper_reference_count_total": 100,
+        "catalog_confidence_level": "consensus",
+        "v0_1_method": "openalex-bibliography-membership-only",
+        "next_step_for_confirmation": "LLM methods-section extraction (CAP-05) on citing paper's full text. If estimator-use of `not-yet-treated comparison group under conditional parallel trends` is confirmed AND self-consistency gate passes, upgrade to confidence=confirmed."
+      }
+    },
+    {
+      "source": "W4213127355",
+      "target": "W3112066496",
+      "edge_type": "mis-cites",
+      "weight": 0.5,
+      "catalog_entry_id": "cs-not-yet-treated-mis-credited-to-sa",
+      "method": "not-yet-treated comparison group under conditional parallel trends",
+      "confidence": "candidate-low",
+      "evidence": {
+        "citing_paper_reference_count_total": 56,
+        "catalog_confidence_level": "consensus",
+        "v0_1_method": "openalex-bibliography-membership-only",
+        "next_step_for_confirmation": "LLM methods-section extraction (CAP-05) on citing paper's full text. If estimator-use of `not-yet-treated comparison group under conditional parallel trends` is confirmed AND self-consistency gate passes, upgrade to confidence=confirmed."
+      }
+    },
+    {
+      "source": "W3084051484",
+      "target": "W3112066496",
+      "edge_type": "mis-cites",
+      "weight": 0.5,
+      "catalog_entry_id": "cs-not-yet-treated-mis-credited-to-sa",
+      "method": "not-yet-treated comparison group under conditional parallel trends",
+      "confidence": "candidate-low",
+      "evidence": {
+        "citing_paper_reference_count_total": 120,
+        "catalog_confidence_level": "consensus",
+        "v0_1_method": "openalex-bibliography-membership-only",
+        "next_step_for_confirmation": "LLM methods-section extraction (CAP-05) on citing paper's full text. If estimator-use of `not-yet-treated comparison group under conditional parallel trends` is confirmed AND self-consistency gate passes, upgrade to confidence=confirmed."
+      }
+    },
+    {
+      "source": "W4327972284",
+      "target": "W3112066496",
+      "edge_type": "mis-cites",
+      "weight": 0.5,
+      "catalog_entry_id": "cs-not-yet-treated-mis-credited-to-sa",
+      "method": "not-yet-treated comparison group under conditional parallel trends",
+      "confidence": "candidate-low",
+      "evidence": {
+        "citing_paper_reference_count_total": 32,
+        "catalog_confidence_level": "consensus",
+        "v0_1_method": "openalex-bibliography-membership-only",
+        "next_step_for_confirmation": "LLM methods-section extraction (CAP-05) on citing paper's full text. If estimator-use of `not-yet-treated comparison group under conditional parallel trends` is confirmed AND self-consistency gate passes, upgrade to confidence=confirmed."
+      }
+    },
+    {
+      "source": "W4386173759",
+      "target": "W3112066496",
+      "edge_type": "mis-cites",
+      "weight": 0.5,
+      "catalog_entry_id": "cs-not-yet-treated-mis-credited-to-sa",
+      "method": "not-yet-treated comparison group under conditional parallel trends",
+      "confidence": "candidate-low",
+      "evidence": {
+        "citing_paper_reference_count_total": 104,
+        "catalog_confidence_level": "consensus",
+        "v0_1_method": "openalex-bibliography-membership-only",
+        "next_step_for_confirmation": "LLM methods-section extraction (CAP-05) on citing paper's full text. If estimator-use of `not-yet-treated comparison group under conditional parallel trends` is confirmed AND self-consistency gate passes, upgrade to confidence=confirmed."
+      }
+    },
+    {
+      "source": "W3125319288",
+      "target": "W3112066496",
+      "edge_type": "mis-cites",
+      "weight": 0.5,
+      "catalog_entry_id": "cs-not-yet-treated-mis-credited-to-sa",
+      "method": "not-yet-treated comparison group under conditional parallel trends",
+      "confidence": "candidate-low",
+      "evidence": {
+        "citing_paper_reference_count_total": 56,
+        "catalog_confidence_level": "consensus",
+        "v0_1_method": "openalex-bibliography-membership-only",
+        "next_step_for_confirmation": "LLM methods-section extraction (CAP-05) on citing paper's full text. If estimator-use of `not-yet-treated comparison group under conditional parallel trends` is confirmed AND self-consistency gate passes, upgrade to confidence=confirmed."
+      }
+    },
+    {
+      "source": "W3150080251",
+      "target": "W3112066496",
+      "edge_type": "mis-cites",
+      "weight": 0.5,
+      "catalog_entry_id": "cs-not-yet-treated-mis-credited-to-sa",
+      "method": "not-yet-treated comparison group under conditional parallel trends",
+      "confidence": "candidate-low",
+      "evidence": {
+        "citing_paper_reference_count_total": 99,
+        "catalog_confidence_level": "consensus",
+        "v0_1_method": "openalex-bibliography-membership-only",
+        "next_step_for_confirmation": "LLM methods-section extraction (CAP-05) on citing paper's full text. If estimator-use of `not-yet-treated comparison group under conditional parallel trends` is confirmed AND self-consistency gate passes, upgrade to confidence=confirmed."
+      }
+    },
+    {
+      "source": "W4386163304",
+      "target": "W3112066496",
+      "edge_type": "mis-cites",
+      "weight": 0.5,
+      "catalog_entry_id": "cs-not-yet-treated-mis-credited-to-sa",
+      "method": "not-yet-treated comparison group under conditional parallel trends",
+      "confidence": "candidate-low",
+      "evidence": {
+        "citing_paper_reference_count_total": 34,
+        "catalog_confidence_level": "consensus",
+        "v0_1_method": "openalex-bibliography-membership-only",
+        "next_step_for_confirmation": "LLM methods-section extraction (CAP-05) on citing paper's full text. If estimator-use of `not-yet-treated comparison group under conditional parallel trends` is confirmed AND self-consistency gate passes, upgrade to confidence=confirmed."
+      }
+    },
+    {
+      "source": "W2803408063",
+      "target": "W2730059782",
+      "edge_type": "mis-cites",
+      "weight": 0.5,
+      "catalog_entry_id": "causal-forests-vs-grf",
+      "method": "causal forests",
+      "confidence": "candidate-low",
+      "evidence": {
+        "citing_paper_reference_count_total": 86,
+        "catalog_confidence_level": "consensus",
+        "v0_1_method": "openalex-bibliography-membership-only",
+        "next_step_for_confirmation": "LLM methods-section extraction (CAP-05) on citing paper's full text. If estimator-use of `causal forests` is confirmed AND self-consistency gate passes, upgrade to confidence=confirmed."
+      }
+    },
+    {
+      "source": "W3126562619",
+      "target": "W2730059782",
+      "edge_type": "mis-cites",
+      "weight": 0.5,
+      "catalog_entry_id": "causal-forests-vs-grf",
+      "method": "causal forests",
+      "confidence": "candidate-low",
+      "evidence": {
+        "citing_paper_reference_count_total": 52,
+        "catalog_confidence_level": "consensus",
+        "v0_1_method": "openalex-bibliography-membership-only",
+        "next_step_for_confirmation": "LLM methods-section extraction (CAP-05) on citing paper's full text. If estimator-use of `causal forests` is confirmed AND self-consistency gate passes, upgrade to confidence=confirmed."
+      }
+    },
+    {
+      "source": "W2790229702",
+      "target": "W2730059782",
+      "edge_type": "mis-cites",
+      "weight": 0.5,
+      "catalog_entry_id": "causal-forests-vs-grf",
+      "method": "causal forests",
+      "confidence": "candidate-low",
+      "evidence": {
+        "citing_paper_reference_count_total": 13,
+        "catalog_confidence_level": "consensus",
+        "v0_1_method": "openalex-bibliography-membership-only",
+        "next_step_for_confirmation": "LLM methods-section extraction (CAP-05) on citing paper's full text. If estimator-use of `causal forests` is confirmed AND self-consistency gate passes, upgrade to confidence=confirmed."
+      }
+    },
+    {
+      "source": "W2888746460",
+      "target": "W2730059782",
+      "edge_type": "mis-cites",
+      "weight": 0.5,
+      "catalog_entry_id": "causal-forests-vs-grf",
+      "method": "causal forests",
+      "confidence": "candidate-low",
+      "evidence": {
+        "citing_paper_reference_count_total": 27,
+        "catalog_confidence_level": "consensus",
+        "v0_1_method": "openalex-bibliography-membership-only",
+        "next_step_for_confirmation": "LLM methods-section extraction (CAP-05) on citing paper's full text. If estimator-use of `causal forests` is confirmed AND self-consistency gate passes, upgrade to confidence=confirmed."
+      }
+    },
+    {
+      "source": "W2810481873",
+      "target": "W2730059782",
+      "edge_type": "mis-cites",
+      "weight": 0.5,
+      "catalog_entry_id": "causal-forests-vs-grf",
+      "method": "causal forests",
+      "confidence": "candidate-low",
+      "evidence": {
+        "citing_paper_reference_count_total": 36,
+        "catalog_confidence_level": "consensus",
+        "v0_1_method": "openalex-bibliography-membership-only",
+        "next_step_for_confirmation": "LLM methods-section extraction (CAP-05) on citing paper's full text. If estimator-use of `causal forests` is confirmed AND self-consistency gate passes, upgrade to confidence=confirmed."
+      }
+    },
+    {
+      "source": "W3119153467",
+      "target": "W2730059782",
+      "edge_type": "mis-cites",
+      "weight": 0.5,
+      "catalog_entry_id": "causal-forests-vs-grf",
+      "method": "causal forests",
+      "confidence": "candidate-low",
+      "evidence": {
+        "citing_paper_reference_count_total": 147,
+        "catalog_confidence_level": "consensus",
+        "v0_1_method": "openalex-bibliography-membership-only",
+        "next_step_for_confirmation": "LLM methods-section extraction (CAP-05) on citing paper's full text. If estimator-use of `causal forests` is confirmed AND self-consistency gate passes, upgrade to confidence=confirmed."
+      }
+    },
+    {
+      "source": "W3040933309",
+      "target": "W2730059782",
+      "edge_type": "mis-cites",
+      "weight": 0.5,
+      "catalog_entry_id": "causal-forests-vs-grf",
+      "method": "causal forests",
+      "confidence": "candidate-low",
+      "evidence": {
+        "citing_paper_reference_count_total": 65,
+        "catalog_confidence_level": "consensus",
+        "v0_1_method": "openalex-bibliography-membership-only",
+        "next_step_for_confirmation": "LLM methods-section extraction (CAP-05) on citing paper's full text. If estimator-use of `causal forests` is confirmed AND self-consistency gate passes, upgrade to confidence=confirmed."
+      }
+    },
+    {
+      "source": "W2787834738",
+      "target": "W2730059782",
+      "edge_type": "mis-cites",
+      "weight": 0.5,
+      "catalog_entry_id": "causal-forests-vs-grf",
+      "method": "causal forests",
+      "confidence": "candidate-low",
+      "evidence": {
+        "citing_paper_reference_count_total": 67,
+        "catalog_confidence_level": "consensus",
+        "v0_1_method": "openalex-bibliography-membership-only",
+        "next_step_for_confirmation": "LLM methods-section extraction (CAP-05) on citing paper's full text. If estimator-use of `causal forests` is confirmed AND self-consistency gate passes, upgrade to confidence=confirmed."
+      }
+    },
+    {
+      "source": "W3004159948",
+      "target": "W2730059782",
+      "edge_type": "mis-cites",
+      "weight": 0.5,
+      "catalog_entry_id": "causal-forests-vs-grf",
+      "method": "causal forests",
+      "confidence": "candidate-low",
+      "evidence": {
+        "citing_paper_reference_count_total": 19,
+        "catalog_confidence_level": "consensus",
+        "v0_1_method": "openalex-bibliography-membership-only",
+        "next_step_for_confirmation": "LLM methods-section extraction (CAP-05) on citing paper's full text. If estimator-use of `causal forests` is confirmed AND self-consistency gate passes, upgrade to confidence=confirmed."
+      }
+    },
+    {
+      "source": "W2793016512",
+      "target": "W2730059782",
+      "edge_type": "mis-cites",
+      "weight": 0.5,
+      "catalog_entry_id": "causal-forests-vs-grf",
+      "method": "causal forests",
+      "confidence": "candidate-low",
+      "evidence": {
+        "citing_paper_reference_count_total": 27,
+        "catalog_confidence_level": "consensus",
+        "v0_1_method": "openalex-bibliography-membership-only",
+        "next_step_for_confirmation": "LLM methods-section extraction (CAP-05) on citing paper's full text. If estimator-use of `causal forests` is confirmed AND self-consistency gate passes, upgrade to confidence=confirmed."
+      }
+    },
+    {
+      "source": "W3110188735",
+      "target": "W2730059782",
+      "edge_type": "mis-cites",
+      "weight": 0.5,
+      "catalog_entry_id": "causal-forests-vs-grf",
+      "method": "causal forests",
+      "confidence": "candidate-low",
+      "evidence": {
+        "citing_paper_reference_count_total": 52,
+        "catalog_confidence_level": "consensus",
+        "v0_1_method": "openalex-bibliography-membership-only",
+        "next_step_for_confirmation": "LLM methods-section extraction (CAP-05) on citing paper's full text. If estimator-use of `causal forests` is confirmed AND self-consistency gate passes, upgrade to confidence=confirmed."
+      }
+    },
+    {
+      "source": "W3196836501",
+      "target": "W4320855218",
+      "edge_type": "mis-cites",
+      "weight": 0.5,
+      "catalog_entry_id": "flci-mis-credited-to-rr",
+      "method": "fixed-length confidence interval (FLCI)",
+      "confidence": "candidate-low",
+      "evidence": {
+        "citing_paper_reference_count_total": 34,
+        "catalog_confidence_level": "strong",
+        "v0_1_method": "openalex-bibliography-membership-only",
+        "next_step_for_confirmation": "LLM methods-section extraction (CAP-05) on citing paper's full text. If estimator-use of `fixed-length confidence interval (FLCI)` is confirmed AND self-consistency gate passes, upgrade to confidence=confirmed."
+      }
+    },
+    {
+      "source": "W4389773814",
+      "target": "W4320855218",
+      "edge_type": "mis-cites",
+      "weight": 0.5,
+      "catalog_entry_id": "flci-mis-credited-to-rr",
+      "method": "fixed-length confidence interval (FLCI)",
+      "confidence": "candidate-low",
+      "evidence": {
+        "citing_paper_reference_count_total": 50,
+        "catalog_confidence_level": "strong",
+        "v0_1_method": "openalex-bibliography-membership-only",
+        "next_step_for_confirmation": "LLM methods-section extraction (CAP-05) on citing paper's full text. If estimator-use of `fixed-length confidence interval (FLCI)` is confirmed AND self-consistency gate passes, upgrade to confidence=confirmed."
+      }
+    },
+    {
+      "source": "W4293761886",
+      "target": "W4320855218",
+      "edge_type": "mis-cites",
+      "weight": 0.5,
+      "catalog_entry_id": "flci-mis-credited-to-rr",
+      "method": "fixed-length confidence interval (FLCI)",
+      "confidence": "candidate-low",
+      "evidence": {
+        "citing_paper_reference_count_total": 53,
+        "catalog_confidence_level": "strong",
+        "v0_1_method": "openalex-bibliography-membership-only",
+        "next_step_for_confirmation": "LLM methods-section extraction (CAP-05) on citing paper's full text. If estimator-use of `fixed-length confidence interval (FLCI)` is confirmed AND self-consistency gate passes, upgrade to confidence=confirmed."
+      }
+    },
+    {
+      "source": "W4382009268",
+      "target": "W4320855218",
+      "edge_type": "mis-cites",
+      "weight": 0.5,
+      "catalog_entry_id": "flci-mis-credited-to-rr",
+      "method": "fixed-length confidence interval (FLCI)",
+      "confidence": "candidate-low",
+      "evidence": {
+        "citing_paper_reference_count_total": 10,
+        "catalog_confidence_level": "strong",
+        "v0_1_method": "openalex-bibliography-membership-only",
+        "next_step_for_confirmation": "LLM methods-section extraction (CAP-05) on citing paper's full text. If estimator-use of `fixed-length confidence interval (FLCI)` is confirmed AND self-consistency gate passes, upgrade to confidence=confirmed."
+      }
+    },
+    {
+      "source": "W3125319288",
+      "target": "W4320855218",
+      "edge_type": "mis-cites",
+      "weight": 0.5,
+      "catalog_entry_id": "flci-mis-credited-to-rr",
+      "method": "fixed-length confidence interval (FLCI)",
+      "confidence": "candidate-low",
+      "evidence": {
+        "citing_paper_reference_count_total": 56,
+        "catalog_confidence_level": "strong",
+        "v0_1_method": "openalex-bibliography-membership-only",
+        "next_step_for_confirmation": "LLM methods-section extraction (CAP-05) on citing paper's full text. If estimator-use of `fixed-length confidence interval (FLCI)` is confirmed AND self-consistency gate passes, upgrade to confidence=confirmed."
+      }
+    },
+    {
+      "source": "W2899541594",
+      "target": "W4320855218",
+      "edge_type": "mis-cites",
+      "weight": 0.5,
+      "catalog_entry_id": "flci-mis-credited-to-rr",
+      "method": "fixed-length confidence interval (FLCI)",
+      "confidence": "candidate-low",
+      "evidence": {
+        "citing_paper_reference_count_total": 82,
+        "catalog_confidence_level": "strong",
+        "v0_1_method": "openalex-bibliography-membership-only",
+        "next_step_for_confirmation": "LLM methods-section extraction (CAP-05) on citing paper's full text. If estimator-use of `fixed-length confidence interval (FLCI)` is confirmed AND self-consistency gate passes, upgrade to confidence=confirmed."
+      }
+    },
+    {
+      "source": "W4398764704",
+      "target": "W4320855218",
+      "edge_type": "mis-cites",
+      "weight": 0.5,
+      "catalog_entry_id": "flci-mis-credited-to-rr",
+      "method": "fixed-length confidence interval (FLCI)",
+      "confidence": "candidate-low",
+      "evidence": {
+        "citing_paper_reference_count_total": 64,
+        "catalog_confidence_level": "strong",
+        "v0_1_method": "openalex-bibliography-membership-only",
+        "next_step_for_confirmation": "LLM methods-section extraction (CAP-05) on citing paper's full text. If estimator-use of `fixed-length confidence interval (FLCI)` is confirmed AND self-consistency gate passes, upgrade to confidence=confirmed."
+      }
+    },
+    {
+      "source": "W3046479494",
+      "target": "W4320855218",
+      "edge_type": "mis-cites",
+      "weight": 0.5,
+      "catalog_entry_id": "flci-mis-credited-to-rr",
+      "method": "fixed-length confidence interval (FLCI)",
+      "confidence": "candidate-low",
+      "evidence": {
+        "citing_paper_reference_count_total": 61,
+        "catalog_confidence_level": "strong",
+        "v0_1_method": "openalex-bibliography-membership-only",
+        "next_step_for_confirmation": "LLM methods-section extraction (CAP-05) on citing paper's full text. If estimator-use of `fixed-length confidence interval (FLCI)` is confirmed AND self-consistency gate passes, upgrade to confidence=confirmed."
+      }
+    },
+    {
+      "source": "W2989928112",
+      "target": "W4320855218",
+      "edge_type": "mis-cites",
+      "weight": 0.5,
+      "catalog_entry_id": "flci-mis-credited-to-rr",
+      "method": "fixed-length confidence interval (FLCI)",
+      "confidence": "candidate-low",
+      "evidence": {
+        "citing_paper_reference_count_total": 57,
+        "catalog_confidence_level": "strong",
+        "v0_1_method": "openalex-bibliography-membership-only",
+        "next_step_for_confirmation": "LLM methods-section extraction (CAP-05) on citing paper's full text. If estimator-use of `fixed-length confidence interval (FLCI)` is confirmed AND self-consistency gate passes, upgrade to confidence=confirmed."
+      }
+    },
+    {
+      "source": "W4310355212",
+      "target": "W4320855218",
+      "edge_type": "mis-cites",
+      "weight": 0.5,
+      "catalog_entry_id": "flci-mis-credited-to-rr",
+      "method": "fixed-length confidence interval (FLCI)",
+      "confidence": "candidate-low",
+      "evidence": {
+        "citing_paper_reference_count_total": 57,
+        "catalog_confidence_level": "strong",
+        "v0_1_method": "openalex-bibliography-membership-only",
+        "next_step_for_confirmation": "LLM methods-section extraction (CAP-05) on citing paper's full text. If estimator-use of `fixed-length confidence interval (FLCI)` is confirmed AND self-consistency gate passes, upgrade to confidence=confirmed."
+      }
+    },
+    {
+      "source": "W4400349012",
+      "target": "W4320855218",
+      "edge_type": "mis-cites",
+      "weight": 0.5,
+      "catalog_entry_id": "flci-mis-credited-to-rr",
+      "method": "fixed-length confidence interval (FLCI)",
+      "confidence": "candidate-low",
+      "evidence": {
+        "citing_paper_reference_count_total": 34,
+        "catalog_confidence_level": "strong",
+        "v0_1_method": "openalex-bibliography-membership-only",
+        "next_step_for_confirmation": "LLM methods-section extraction (CAP-05) on citing paper's full text. If estimator-use of `fixed-length confidence interval (FLCI)` is confirmed AND self-consistency gate passes, upgrade to confidence=confirmed."
+      }
+    },
+    {
+      "source": "W4405761686",
+      "target": "W4320855218",
+      "edge_type": "mis-cites",
+      "weight": 0.5,
+      "catalog_entry_id": "flci-mis-credited-to-rr",
+      "method": "fixed-length confidence interval (FLCI)",
+      "confidence": "candidate-low",
+      "evidence": {
+        "citing_paper_reference_count_total": 38,
+        "catalog_confidence_level": "strong",
+        "v0_1_method": "openalex-bibliography-membership-only",
+        "next_step_for_confirmation": "LLM methods-section extraction (CAP-05) on citing paper's full text. If estimator-use of `fixed-length confidence interval (FLCI)` is confirmed AND self-consistency gate passes, upgrade to confidence=confirmed."
+      }
+    },
+    {
+      "source": "W4391246671",
+      "target": "W4320855218",
+      "edge_type": "mis-cites",
+      "weight": 0.5,
+      "catalog_entry_id": "flci-mis-credited-to-rr",
+      "method": "fixed-length confidence interval (FLCI)",
+      "confidence": "candidate-low",
+      "evidence": {
+        "citing_paper_reference_count_total": 25,
+        "catalog_confidence_level": "strong",
+        "v0_1_method": "openalex-bibliography-membership-only",
+        "next_step_for_confirmation": "LLM methods-section extraction (CAP-05) on citing paper's full text. If estimator-use of `fixed-length confidence interval (FLCI)` is confirmed AND self-consistency gate passes, upgrade to confidence=confirmed."
+      }
+    },
+    {
+      "source": "W4378894993",
+      "target": "W4320855218",
+      "edge_type": "mis-cites",
+      "weight": 0.5,
+      "catalog_entry_id": "flci-mis-credited-to-rr",
+      "method": "fixed-length confidence interval (FLCI)",
+      "confidence": "candidate-low",
+      "evidence": {
+        "citing_paper_reference_count_total": 42,
+        "catalog_confidence_level": "strong",
+        "v0_1_method": "openalex-bibliography-membership-only",
+        "next_step_for_confirmation": "LLM methods-section extraction (CAP-05) on citing paper's full text. If estimator-use of `fixed-length confidence interval (FLCI)` is confirmed AND self-consistency gate passes, upgrade to confidence=confirmed."
+      }
+    },
+    {
+      "source": "W3035452373",
+      "target": "W4320855218",
+      "edge_type": "mis-cites",
+      "weight": 0.5,
+      "catalog_entry_id": "flci-mis-credited-to-rr",
+      "method": "fixed-length confidence interval (FLCI)",
+      "confidence": "candidate-low",
+      "evidence": {
+        "citing_paper_reference_count_total": 123,
+        "catalog_confidence_level": "strong",
+        "v0_1_method": "openalex-bibliography-membership-only",
+        "next_step_for_confirmation": "LLM methods-section extraction (CAP-05) on citing paper's full text. If estimator-use of `fixed-length confidence interval (FLCI)` is confirmed AND self-consistency gate passes, upgrade to confidence=confirmed."
+      }
+    },
+    {
+      "source": "W4405774612",
+      "target": "W4320855218",
+      "edge_type": "mis-cites",
+      "weight": 0.5,
+      "catalog_entry_id": "flci-mis-credited-to-rr",
+      "method": "fixed-length confidence interval (FLCI)",
+      "confidence": "candidate-low",
+      "evidence": {
+        "citing_paper_reference_count_total": 132,
+        "catalog_confidence_level": "strong",
+        "v0_1_method": "openalex-bibliography-membership-only",
+        "next_step_for_confirmation": "LLM methods-section extraction (CAP-05) on citing paper's full text. If estimator-use of `fixed-length confidence interval (FLCI)` is confirmed AND self-consistency gate passes, upgrade to confidence=confirmed."
+      }
+    },
+    {
+      "source": "W4413754779",
+      "target": "W4320855218",
+      "edge_type": "mis-cites",
+      "weight": 0.5,
+      "catalog_entry_id": "flci-mis-credited-to-rr",
+      "method": "fixed-length confidence interval (FLCI)",
+      "confidence": "candidate-low",
+      "evidence": {
+        "citing_paper_reference_count_total": 25,
+        "catalog_confidence_level": "strong",
+        "v0_1_method": "openalex-bibliography-membership-only",
+        "next_step_for_confirmation": "LLM methods-section extraction (CAP-05) on citing paper's full text. If estimator-use of `fixed-length confidence interval (FLCI)` is confirmed AND self-consistency gate passes, upgrade to confidence=confirmed."
+      }
+    },
+    {
+      "source": "W3026574757",
+      "target": "W4320855218",
+      "edge_type": "mis-cites",
+      "weight": 0.5,
+      "catalog_entry_id": "flci-mis-credited-to-rr",
+      "method": "fixed-length confidence interval (FLCI)",
+      "confidence": "candidate-low",
+      "evidence": {
+        "citing_paper_reference_count_total": 63,
+        "catalog_confidence_level": "strong",
+        "v0_1_method": "openalex-bibliography-membership-only",
+        "next_step_for_confirmation": "LLM methods-section extraction (CAP-05) on citing paper's full text. If estimator-use of `fixed-length confidence interval (FLCI)` is confirmed AND self-consistency gate passes, upgrade to confidence=confirmed."
+      }
+    },
+    {
+      "source": "W4407667415",
+      "target": "W4320855218",
+      "edge_type": "mis-cites",
+      "weight": 0.5,
+      "catalog_entry_id": "flci-mis-credited-to-rr",
+      "method": "fixed-length confidence interval (FLCI)",
+      "confidence": "candidate-low",
+      "evidence": {
+        "citing_paper_reference_count_total": 93,
+        "catalog_confidence_level": "strong",
+        "v0_1_method": "openalex-bibliography-membership-only",
+        "next_step_for_confirmation": "LLM methods-section extraction (CAP-05) on citing paper's full text. If estimator-use of `fixed-length confidence interval (FLCI)` is confirmed AND self-consistency gate passes, upgrade to confidence=confirmed."
+      }
+    },
+    {
+      "source": "W4408954264",
+      "target": "W4320855218",
+      "edge_type": "mis-cites",
+      "weight": 0.5,
+      "catalog_entry_id": "flci-mis-credited-to-rr",
+      "method": "fixed-length confidence interval (FLCI)",
+      "confidence": "candidate-low",
+      "evidence": {
+        "citing_paper_reference_count_total": 47,
+        "catalog_confidence_level": "strong",
+        "v0_1_method": "openalex-bibliography-membership-only",
+        "next_step_for_confirmation": "LLM methods-section extraction (CAP-05) on citing paper's full text. If estimator-use of `fixed-length confidence interval (FLCI)` is confirmed AND self-consistency gate passes, upgrade to confidence=confirmed."
+      }
+    },
+    {
+      "source": "W4388806290",
+      "target": "W4320855218",
+      "edge_type": "mis-cites",
+      "weight": 0.5,
+      "catalog_entry_id": "flci-mis-credited-to-rr",
+      "method": "fixed-length confidence interval (FLCI)",
+      "confidence": "candidate-low",
+      "evidence": {
+        "citing_paper_reference_count_total": 80,
+        "catalog_confidence_level": "strong",
+        "v0_1_method": "openalex-bibliography-membership-only",
+        "next_step_for_confirmation": "LLM methods-section extraction (CAP-05) on citing paper's full text. If estimator-use of `fixed-length confidence interval (FLCI)` is confirmed AND self-consistency gate passes, upgrade to confidence=confirmed."
+      }
+    },
+    {
+      "source": "W4210820253",
+      "target": "W4320855218",
+      "edge_type": "mis-cites",
+      "weight": 0.5,
+      "catalog_entry_id": "flci-mis-credited-to-rr",
+      "method": "fixed-length confidence interval (FLCI)",
+      "confidence": "candidate-low",
+      "evidence": {
+        "citing_paper_reference_count_total": 79,
+        "catalog_confidence_level": "strong",
+        "v0_1_method": "openalex-bibliography-membership-only",
+        "next_step_for_confirmation": "LLM methods-section extraction (CAP-05) on citing paper's full text. If estimator-use of `fixed-length confidence interval (FLCI)` is confirmed AND self-consistency gate passes, upgrade to confidence=confirmed."
+      }
+    },
+    {
+      "source": "W4400177023",
+      "target": "W4320855218",
+      "edge_type": "mis-cites",
+      "weight": 0.5,
+      "catalog_entry_id": "flci-mis-credited-to-rr",
+      "method": "fixed-length confidence interval (FLCI)",
+      "confidence": "candidate-low",
+      "evidence": {
+        "citing_paper_reference_count_total": 239,
+        "catalog_confidence_level": "strong",
+        "v0_1_method": "openalex-bibliography-membership-only",
+        "next_step_for_confirmation": "LLM methods-section extraction (CAP-05) on citing paper's full text. If estimator-use of `fixed-length confidence interval (FLCI)` is confirmed AND self-consistency gate passes, upgrade to confidence=confirmed."
+      }
+    },
+    {
+      "source": "W4410255654",
+      "target": "W4320855218",
+      "edge_type": "mis-cites",
+      "weight": 0.5,
+      "catalog_entry_id": "flci-mis-credited-to-rr",
+      "method": "fixed-length confidence interval (FLCI)",
+      "confidence": "candidate-low",
+      "evidence": {
+        "citing_paper_reference_count_total": 78,
+        "catalog_confidence_level": "strong",
+        "v0_1_method": "openalex-bibliography-membership-only",
+        "next_step_for_confirmation": "LLM methods-section extraction (CAP-05) on citing paper's full text. If estimator-use of `fixed-length confidence interval (FLCI)` is confirmed AND self-consistency gate passes, upgrade to confidence=confirmed."
+      }
+    }
+  ],
+  "chains": [
+    {
+      "chain_id": "flci-mis-credited-to-rr",
+      "method": "fixed-length confidence interval (FLCI)",
+      "correct_origin": {
+        "openalex_id": "W2176150731",
+        "doi": "10.3982/ecta14434",
+        "authors": "Armstrong & Kolesar",
+        "year": 2018,
+        "title": "Optimal Inference in a Class of Regression Models"
+      },
+      "wrong_credit": {
+        "openalex_id": "W4320855218",
+        "doi": "10.1093/restud/rdad018",
+        "authors": "Rambachan & Roth",
+        "year": 2023,
+        "title": "A More Credible Approach to Parallel Trends"
+      },
+      "evidence_count": 24,
+      "confidence_level": "strong",
+      "rank_score": 3.2188758248682006,
+      "catalog_evidence": "FLCI machinery itself is Armstrong-Kolesar 2018 (Econometrica). RR 2023 adapts it for use with Delta-SD; cite both \u2014 RR for the honest-DiD application, Armstrong-Kolesar for FLCI methodology.",
+      "catalog_sources_of_claim": [
+        "honest-did/papers.md attribution map line 249",
+        "Armstrong & Kolesar 2018 Econometrica"
+      ]
+    },
+    {
+      "chain_id": "cs-not-yet-treated-mis-credited-to-sa",
+      "method": "not-yet-treated comparison group under conditional parallel trends",
+      "correct_origin": {
+        "openalex_id": "W3113269512",
+        "doi": "10.1016/j.jeconom.2020.12.001",
+        "authors": "Callaway & Sant'Anna",
+        "year": 2021,
+        "title": "Difference-in-Differences with multiple time periods"
+      },
+      "wrong_credit": {
+        "openalex_id": "W3112066496",
+        "doi": "10.1016/j.jeconom.2020.09.006",
+        "authors": "Sun & Abraham",
+        "year": 2021,
+        "title": "Estimating dynamic treatment effects in event studies with heterogeneous treatment effects"
+      },
+      "evidence_count": 22,
+      "confidence_level": "consensus",
+      "rank_score": 3.1354942159291497,
+      "catalog_evidence": "Sun-Abraham uses never-treated or last-to-be-treated as the comparison; the not-yet-treated comparison-group construction is CS 2021 Assumption 5.",
+      "catalog_sources_of_claim": [
+        "honest-did/papers.md cross-paper attribution map line 235",
+        "Roth-Sant'Anna-Bilinski-Poe 2023 (JoE) \u00a73.3 taxonomy of estimators"
+      ]
+    },
+    {
+      "chain_id": "causal-forests-vs-grf",
+      "method": "causal forests",
+      "correct_origin": {
+        "openalex_id": "W2208550830",
+        "doi": "10.1080/01621459.2017.1319839",
+        "authors": "Wager & Athey",
+        "year": 2018,
+        "title": "Estimation and Inference of Heterogeneous Treatment Effects using Random Forests"
+      },
+      "wrong_credit": {
+        "openalex_id": "W2730059782",
+        "doi": "10.1214/18-aos1709",
+        "authors": "Athey, Tibshirani & Wager",
+        "year": 2019,
+        "title": "Generalized random forests"
+      },
+      "evidence_count": 11,
+      "confidence_level": "consensus",
+      "rank_score": 2.4849066497880004,
+      "catalog_evidence": "Athey-Tibshirani-Wager 2019 Annals of Statistics is Generalized Random Forests (GRF), a broader framework. Causal forests proper is Wager-Athey 2018 JASA. The GRF paper builds on causal forests; it does not introduce them.",
+      "catalog_sources_of_claim": [
+        "Pillar workflow doc 2026-05-25 misattribution-traps line 85",
+        "Wager & Athey 2018 JASA 113(523): 1228-1242",
+        "Athey, Tibshirani & Wager 2019 Annals of Statistics 47(2): 1148-1178"
+      ]
+    }
+  ],
+  "build_meta": {
+    "catalog_entries_processed": 3,
+    "smoke_test_subset": [
+      "cs-not-yet-treated-mis-credited-to-sa",
+      "causal-forests-vs-grf",
+      "flci-mis-credited-to-rr"
+    ],
+    "limitations_v0_1": [
+      "OpenAlex-only citation edges (Semantic Scholar key 403; v0.2 unlock).",
+      "Misattribution edges are CANDIDATES based on bibliography membership; methods-section LLM verification (CAP-05) required for confirmed status.",
+      "No version-merge across NBER WP + arXiv + journal DOI yet; each identifier is a separate node. v0.2 will collapse on title+author+year hash.",
+      "No 'claims_to_extend_misattributes' detector. severity_weight=1.0 for all chains.",
+      "No SSRN nodes (documented capability limitation per spec)."
+    ]
+  }
+}

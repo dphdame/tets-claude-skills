@@ -1,0 +1,41 @@
+package_id,journal,primary_language,coder,code_date,readme_present_hc,readme_word_count_hc,has_software_versions_hc,has_runtime_estimate_hc,has_reproducibility_language_hc,das_class_hc,has_code_dir_hc,has_data_dir_hc,has_output_dir_hc,layout_score_hc,has_master_script_hc,master_script_path_hc,seed_set_count_hc,seed_set_by_language_hc,hardcoded_paths_count_hc,version_pin_files_hc,loc_total_hc,primary_language_machine,primary_language_agree,das_class_machine,das_class_agree,master_script_machine,master_script_agree,seed_count_machine,seed_count_diff,hardcoded_paths_count_machine,hardcoded_paths_count_diff,notes
+# Row instructions:
+# - One row per package. Fill *_hc columns by hand reading the actual package.
+# - Leave *_machine, *_agree, *_diff columns blank; populated by validation/run_validation.py.
+# - das_class_hc must be one of: all_public | public_with_scripts | restricted_with_protocol | opaque
+# - primary_language_hc must be one of: stata | r | python | matlab | julia | sas | mixed | none
+# - layout_score_hc = integer 0..3 = count of (code, data, output) dirs present
+# - seed_set_by_language_hc: write as JSON object like {"stata":3,"r":1}
+# - version_pin_files_hc: write as JSON list like ["renv.lock","DESCRIPTION"]
+# - Sample composition: 10 Stata, 10 R, 10 Python; drawn from analytic-500.txt
+# - Coder: initials. code_date: YYYY-MM-DD.
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,

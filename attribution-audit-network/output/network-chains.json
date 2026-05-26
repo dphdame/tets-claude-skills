@@ -1,0 +1,86 @@
+{
+  "version": "0.1",
+  "build_date": "2026-05-25T21:04:37.512023+00:00",
+  "catalog_version": "1.0",
+  "chains": [
+    {
+      "chain_id": "flci-mis-credited-to-rr",
+      "method": "fixed-length confidence interval (FLCI)",
+      "correct_origin": {
+        "openalex_id": "W2176150731",
+        "doi": "10.3982/ecta14434",
+        "authors": "Armstrong & Kolesar",
+        "year": 2018,
+        "title": "Optimal Inference in a Class of Regression Models"
+      },
+      "wrong_credit": {
+        "openalex_id": "W4320855218",
+        "doi": "10.1093/restud/rdad018",
+        "authors": "Rambachan & Roth",
+        "year": 2023,
+        "title": "A More Credible Approach to Parallel Trends"
+      },
+      "evidence_count": 24,
+      "confidence_level": "strong",
+      "rank_score": 3.2188758248682006,
+      "catalog_evidence": "FLCI machinery itself is Armstrong-Kolesar 2018 (Econometrica). RR 2023 adapts it for use with Delta-SD; cite both \u2014 RR for the honest-DiD application, Armstrong-Kolesar for FLCI methodology.",
+      "catalog_sources_of_claim": [
+        "honest-did/papers.md attribution map line 249",
+        "Armstrong & Kolesar 2018 Econometrica"
+      ]
+    },
+    {
+      "chain_id": "cs-not-yet-treated-mis-credited-to-sa",
+      "method": "not-yet-treated comparison group under conditional parallel trends",
+      "correct_origin": {
+        "openalex_id": "W3113269512",
+        "doi": "10.1016/j.jeconom.2020.12.001",
+        "authors": "Callaway & Sant'Anna",
+        "year": 2021,
+        "title": "Difference-in-Differences with multiple time periods"
+      },
+      "wrong_credit": {
+        "openalex_id": "W3112066496",
+        "doi": "10.1016/j.jeconom.2020.09.006",
+        "authors": "Sun & Abraham",
+        "year": 2021,
+        "title": "Estimating dynamic treatment effects in event studies with heterogeneous treatment effects"
+      },
+      "evidence_count": 22,
+      "confidence_level": "consensus",
+      "rank_score": 3.1354942159291497,
+      "catalog_evidence": "Sun-Abraham uses never-treated or last-to-be-treated as the comparison; the not-yet-treated comparison-group construction is CS 2021 Assumption 5.",
+      "catalog_sources_of_claim": [
+        "honest-did/papers.md cross-paper attribution map line 235",
+        "Roth-Sant'Anna-Bilinski-Poe 2023 (JoE) \u00a73.3 taxonomy of estimators"
+      ]
+    },
+    {
+      "chain_id": "causal-forests-vs-grf",
+      "method": "causal forests",
+      "correct_origin": {
+        "openalex_id": "W2208550830",
+        "doi": "10.1080/01621459.2017.1319839",
+        "authors": "Wager & Athey",
+        "year": 2018,
+        "title": "Estimation and Inference of Heterogeneous Treatment Effects using Random Forests"
+      },
+      "wrong_credit": {
+        "openalex_id": "W2730059782",
+        "doi": "10.1214/18-aos1709",
+        "authors": "Athey, Tibshirani & Wager",
+        "year": 2019,
+        "title": "Generalized random forests"
+      },
+      "evidence_count": 11,
+      "confidence_level": "consensus",
+      "rank_score": 2.4849066497880004,
+      "catalog_evidence": "Athey-Tibshirani-Wager 2019 Annals of Statistics is Generalized Random Forests (GRF), a broader framework. Causal forests proper is Wager-Athey 2018 JASA. The GRF paper builds on causal forests; it does not introduce them.",
+      "catalog_sources_of_claim": [
+        "Pillar workflow doc 2026-05-25 misattribution-traps line 85",
+        "Wager & Athey 2018 JASA 113(523): 1228-1242",
+        "Athey, Tibshirani & Wager 2019 Annals of Statistics 47(2): 1148-1178"
+      ]
+    }
+  ]
+}

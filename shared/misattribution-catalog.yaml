@@ -1,0 +1,405 @@
+# misattribution-catalog.yaml
+# Canonical catalog of causal-inference citation traps for the TETS papers.md generator.
+# Seeded 2026-05-25 from citation-audit/honest-did/papers.md cross-paper attribution map
+# plus the CAPABILITY-05 spec misattribution-traps list.
+#
+# Entries are the IP / moat layer of CAP-05. Accuracy beats completeness.
+# Every entry carries source-of-claim citations. Entries with unresolved DOIs
+# carry "TODO: verify DOI" markers; the closest-known identifier (arXiv, NBER WP)
+# is retained so the misattribution-trap engine can still match by surface form.
+#
+# Schema (per entry):
+#   wrong_credit:   {authors, year, doi (nullable), surface_forms}
+#   correct_credit: {authors, year, doi (nullable), section}
+#   method:         the named procedure or claim being misattributed
+#   evidence:       observation context for this trap
+#   confidence_level: consensus | strong | provisional
+#   sources_of_claim: list of authoritative sources that document the correct credit
+#   last_reviewed_by: initials
+#   last_reviewed_date: ISO date
+#   catalog_version: semver
+
+catalog_version: "1.0"
+last_reviewed_by: "V. Cholette"
+last_reviewed_date: 2026-05-25
+
+entries:
+
+  # ============================================================
+  # SEED FROM honest-did/papers.md (lines 230-254 attribution map)
+  # ============================================================
+
+  - id: cs-not-yet-treated-mis-credited-to-sa
+    wrong_credit:
+      authors: "Sun & Abraham"
+      year: 2021
+      doi: "10.1016/j.jeconom.2020.09.006"
+      surface_forms:
+        - "Sun-Abraham not-yet-treated"
+        - "Sun and Abraham (2021) not-yet-treated comparison"
+        - "SA 2021 not-yet-treated"
+    correct_credit:
+      authors: "Callaway & Sant'Anna"
+      year: 2021
+      doi: "10.1016/j.jeconom.2020.12.001"
+      section: "Section 2.3, Assumption 5"
+    method: "not-yet-treated comparison group under conditional parallel trends"
+    evidence: "Sun-Abraham uses never-treated or last-to-be-treated as the comparison; the not-yet-treated comparison-group construction is CS 2021 Assumption 5."
+    confidence_level: consensus
+    sources_of_claim:
+      - "honest-did/papers.md cross-paper attribution map line 235"
+      - "Roth-Sant'Anna-Bilinski-Poe 2023 (JoE) §3.3 taxonomy of estimators"
+    last_reviewed_by: "V. Cholette"
+    last_reviewed_date: 2026-05-25
+
+  - id: cs-dr-estimator-mis-credited-to-sa
+    wrong_credit:
+      authors: "Sun & Abraham"
+      year: 2021
+      doi: "10.1016/j.jeconom.2020.09.006"
+      surface_forms:
+        - "Sun-Abraham doubly-robust"
+        - "SA 2021 doubly-robust ATT estimator"
+    correct_credit:
+      authors: "Callaway & Sant'Anna"
+      year: 2021
+      doi: "10.1016/j.jeconom.2020.12.001"
+      section: "Section 2.4, Equations 2.4 and 2.7"
+    method: "doubly-robust estimator for ATT(g,t)"
+    evidence: "Sun-Abraham's interaction-weighted estimator is NOT doubly-robust; the DR identifying functional with propensity-score and outcome-regression representations is CS 2021."
+    confidence_level: consensus
+    sources_of_claim:
+      - "honest-did/papers.md attribution map line 236"
+      - "Callaway & Sant'Anna 2021 §2.4"
+    last_reviewed_by: "V. Cholette"
+    last_reviewed_date: 2026-05-25
+
+  - id: roth-2022-mis-credited-as-sensitivity-framework
+    wrong_credit:
+      authors: "Roth"
+      year: 2022
+      doi: "10.1257/aeri.20210236"
+      surface_forms:
+        - "Roth 2022 sensitivity analysis"
+        - "Roth 2022 Delta-RM"
+        - "Roth 2022 honest DiD"
+    correct_credit:
+      authors: "Rambachan & Roth"
+      year: 2023
+      doi: "10.1093/restud/rdad018"
+      section: "Section 2 (Delta-RM and Delta-SD definitions)"
+    method: "sensitivity analysis under parallel-trends violations (Delta-RM, Delta-SD, breakdown M, FLCI, ARP)"
+    evidence: "Roth 2022 is the pretest-bias diagnostic critique; the constructive sensitivity framework with restriction sets on differential trends is Rambachan-Roth 2023."
+    confidence_level: consensus
+    sources_of_claim:
+      - "honest-did/papers.md attribution map lines 245-249"
+      - "Rambachan & Roth 2023 abstract"
+    last_reviewed_by: "V. Cholette"
+    last_reviewed_date: 2026-05-25
+
+  - id: rr-2023-mis-credited-with-pretest-bias-claim
+    wrong_credit:
+      authors: "Rambachan & Roth"
+      year: 2023
+      doi: "10.1093/restud/rdad018"
+      surface_forms:
+        - "Rambachan-Roth pre-trends test low power"
+        - "RR 2023 pretest bias"
+    correct_credit:
+      authors: "Roth"
+      year: 2022
+      doi: "10.1257/aeri.20210236"
+      section: "Abstract; working-paper Sections 2-3"
+    method: "low power of pre-trends tests; conditional-on-pretest distortion"
+    evidence: "The pretest-bias and low-power diagnostic is Roth 2022 (AER:Insights). RR 2023 cites Roth 2022 but does not derive the diagnostic itself."
+    confidence_level: consensus
+    sources_of_claim:
+      - "honest-did/papers.md attribution map lines 243-244"
+      - "Roth 2022 AER:Insights"
+    last_reviewed_by: "V. Cholette"
+    last_reviewed_date: 2026-05-25
+
+  - id: rr-2023-default-mbar-fabrication
+    wrong_credit:
+      authors: "Rambachan & Roth"
+      year: 2023
+      doi: "10.1093/restud/rdad018"
+      surface_forms:
+        - "RR 2023 default M-bar = 1"
+        - "Rambachan-Roth recommend M = 1"
+    correct_credit:
+      authors: "Rambachan & Roth"
+      year: 2023
+      doi: "10.1093/restud/rdad018"
+      section: "Section 4 (sensitivity discussion)"
+    method: "default sensitivity parameter value"
+    evidence: "RR 2023 prescribes no default for M-bar or M; the right value is a domain-knowledge choice. Methods notes that quote M-bar=1 as a default are misattributing the user-choice burden back to the paper."
+    confidence_level: consensus
+    sources_of_claim:
+      - "honest-did/papers.md note line 94 ('does not prescribe a default value of M-bar or M')"
+      - "Pillar workflow doc 2026-05-25, misattribution-traps list line 84"
+    last_reviewed_by: "V. Cholette"
+    last_reviewed_date: 2026-05-25
+
+  - id: rsbp-2023-mis-credited-for-formal-results
+    wrong_credit:
+      authors: "Roth, Sant'Anna, Bilinski & Poe"
+      year: 2023
+      doi: "10.1016/j.jeconom.2023.03.008"
+      surface_forms:
+        - "RSBP 2023 derived"
+        - "Roth et al. 2023 proposes"
+        - "Roth-Sant'Anna 2023 doubly-robust estimator"
+    correct_credit:
+      authors: "varies by claim"
+      year: null
+      doi: null
+      section: "see individual primary sources (CS, SA, BJS, dCDH, RR)"
+    method: "any formal estimator or inference result attributed to the RSBP synthesis"
+    evidence: "RSBP 2023 is a synthesis paper. It organizes and recommends among existing estimators; it does not propose new formal results. Cite the underlying primary paper, not RSBP."
+    confidence_level: consensus
+    sources_of_claim:
+      - "honest-did/papers.md note line 180-181"
+      - "Roth-Sant'Anna-Bilinski-Poe 2023 §3.3"
+    last_reviewed_by: "V. Cholette"
+    last_reviewed_date: 2026-05-25
+
+  - id: sa-2021-twfe-contamination-prop-number
+    wrong_credit:
+      authors: "Sun & Abraham"
+      year: 2021
+      doi: "10.1016/j.jeconom.2020.09.006"
+      surface_forms:
+        - "Sun-Abraham Proposition 2 Equation 13"
+        - "SA 2021 Prop 2 contamination"
+    correct_credit:
+      authors: "Sun & Abraham"
+      year: 2021
+      doi: "10.1016/j.jeconom.2020.09.006"
+      section: "Section 3.2, Proposition 1, Equations 9-12, page 181"
+    method: "TWFE event-study contamination decomposition"
+    evidence: "The full contamination decomposition is Proposition 1 (Eqs. 9-12) in §3.2, page 181 of the JoE version. The earlier attribution to Prop. 2 / Eq. 13 was a working-paper-vs-journal misread."
+    confidence_level: strong
+    sources_of_claim:
+      - "honest-did/papers.md SA 2021 corrected anchors line 203"
+      - "honest-did journal-anchors.md (2026-05-22 correction)"
+    last_reviewed_by: "V. Cholette"
+    last_reviewed_date: 2026-05-25
+
+  - id: sa-2021-iw-estimator-prop-number
+    wrong_credit:
+      authors: "Sun & Abraham"
+      year: 2021
+      doi: "10.1016/j.jeconom.2020.09.006"
+      surface_forms:
+        - "Sun-Abraham Proposition 4 Equation 15"
+        - "SA 2021 Prop 4 IW estimator"
+    correct_credit:
+      authors: "Sun & Abraham"
+      year: 2021
+      doi: "10.1016/j.jeconom.2020.09.006"
+      section: "Section 4.1, Equations 27 and 28, pages 185-186; Proposition 5 in §4.2 page 187"
+    method: "Interaction-weighted (IW) estimator"
+    evidence: "The IW estimator is §4.1 Eqs. 27-28, with validity in a paragraph following Eq. 28 (not a numbered proposition). The earlier attribution to Prop. 4 / Eq. 15 was wrong."
+    confidence_level: strong
+    sources_of_claim:
+      - "honest-did/papers.md SA 2021 corrected anchors line 210"
+      - "honest-did journal-anchors.md (2026-05-22 correction)"
+    last_reviewed_by: "V. Cholette"
+    last_reviewed_date: 2026-05-25
+
+  - id: flci-mis-credited-to-rr
+    wrong_credit:
+      authors: "Rambachan & Roth"
+      year: 2023
+      doi: "10.1093/restud/rdad018"
+      surface_forms:
+        - "Rambachan-Roth FLCI"
+        - "RR FLCI methodology"
+    correct_credit:
+      authors: "Armstrong & Kolesar"
+      year: 2018
+      doi: "10.3982/ECTA14434"
+      section: "FLCI machinery"
+    method: "fixed-length confidence interval (FLCI)"
+    evidence: "FLCI machinery itself is Armstrong-Kolesar 2018 (Econometrica). RR 2023 adapts it for use with Delta-SD; cite both — RR for the honest-DiD application, Armstrong-Kolesar for FLCI methodology."
+    confidence_level: strong
+    sources_of_claim:
+      - "honest-did/papers.md attribution map line 249"
+      - "Armstrong & Kolesar 2018 Econometrica"
+    last_reviewed_by: "V. Cholette"
+    last_reviewed_date: 2026-05-25
+
+  - id: clf-mis-credited-to-rr
+    wrong_credit:
+      authors: "Rambachan & Roth"
+      year: 2023
+      doi: "10.1093/restud/rdad018"
+      surface_forms:
+        - "Rambachan-Roth conditional confidence sets"
+        - "RR C-LF inference"
+    correct_credit:
+      authors: "Andrews, Roth & Pakes"
+      year: 2023
+      doi: "10.1093/restud/rdad004"
+      section: "Review of Economic Studies 90(6): 2763-2791; ARP conditional / least-favorable inference machinery"
+    method: "ARP / C-LF conditional confidence sets"
+    evidence: "Conditional-CI machinery is Andrews-Roth-Pakes 2023 'Inference for Linear Conditional Moment Inequalities' (Review of Economic Studies, not Journal of Econometrics as earlier draft indicated). RR 2023 adopts it for honest-DiD inference under Delta-RM."
+    confidence_level: consensus
+    sources_of_claim:
+      - "honest-did/papers.md attribution map line 250"
+      - "CrossRef DOI 10.1093/restud/rdad004 (verified 2026-05-25)"
+    verification_notes: "DOI verified via CrossRef API 2026-05-25. Catalog originally referenced Journal of Econometrics; actual venue is Review of Economic Studies, vol 90 no 6, pp 2763-2791, online Jan 2023 / print Nov 2023."
+    last_reviewed_by: "V. Cholette"
+    last_reviewed_date: 2026-05-25
+
+  # ============================================================
+  # SEED FROM CAP-05 SPEC + PILLAR-WORKFLOW MISATTRIBUTION TRAPS
+  # ============================================================
+
+  - id: causal-forests-vs-grf
+    wrong_credit:
+      authors: "Athey, Tibshirani & Wager"
+      year: 2019
+      doi: "10.1214/18-AOS1709"
+      surface_forms:
+        - "Athey-Tibshirani-Wager causal forests"
+        - "Athey et al. 2019 causal forests"
+        - "ATW 2019 causal forests"
+    correct_credit:
+      authors: "Wager & Athey"
+      year: 2018
+      doi: "10.1080/01621459.2017.1319839"
+      section: "Wager & Athey 2018 JASA"
+    method: "causal forests"
+    evidence: "Athey-Tibshirani-Wager 2019 Annals of Statistics is Generalized Random Forests (GRF), a broader framework. Causal forests proper is Wager-Athey 2018 JASA. The GRF paper builds on causal forests; it does not introduce them."
+    confidence_level: consensus
+    sources_of_claim:
+      - "Pillar workflow doc 2026-05-25 misattribution-traps line 85"
+      - "Wager & Athey 2018 JASA 113(523): 1228-1242"
+      - "Athey, Tibshirani & Wager 2019 Annals of Statistics 47(2): 1148-1178"
+    last_reviewed_by: "V. Cholette"
+    last_reviewed_date: 2026-05-25
+
+  - id: surrogate-index-vs-esc
+    wrong_credit:
+      authors: "Athey, Chetty & Imbens"
+      year: 2020
+      doi: null
+      arxiv_id: "2006.09676"
+      surface_forms:
+        - "Athey-Chetty-Imbens 2020 surrogate index"
+        - "ACI 2020 surrogate index"
+        - "ACI 2020 ESC"
+        - "Estimating Surrogacy Coefficients"
+    correct_credit:
+      authors: "Athey, Chetty, Imbens & Kang"
+      year: 2019
+      doi: "10.3386/w26463"
+      arxiv_id: "1603.09326"
+      journal_doi: "10.1093/restud/rdaf087"
+      section: "NBER WP 26463 (2019); journal publication ReStud 2025"
+    method: "surrogate index estimator"
+    evidence: "The three-author Athey-Chetty-Imbens 2020 paper (arXiv 2006.09676, 'Using Experiments to Correct for Selection in Observational Studies', informally called the ESC paper) is a distinct method addressing experimental selection correction, not the surrogate index. The surrogate index estimator proper is the four-author Athey-Chetty-Imbens-Kang paper (NBER WP 26463, 2019; arXiv 1603.09326 origin 2016; published 2025 in Review of Economic Studies as 'The Surrogate Index: Combining Short-Term Proxies to Estimate Long-Term Treatment Effects More Rapidly and Precisely')."
+    confidence_level: consensus
+    sources_of_claim:
+      - "Pillar workflow doc 2026-05-25 misattribution-traps line 86"
+      - "NBER WP 26463 / 10.3386/w26463 (Athey, Chetty, Imbens & Kang 2019)"
+      - "ReStud 2025 publication 10.1093/restud/rdaf087"
+      - "arXiv 2006.09676 (Athey, Chetty, Imbens 2020, three-author paper)"
+    verification_notes: "Verified via CrossRef and arXiv 2026-05-25. The catalog originally branded the three-author paper as 'Estimating Surrogacy Coefficients (ESC)'; the actual paper title is 'Using Experiments to Correct for Selection in Observational Studies'. A 2025 NBER follow-up by the same three authors carries DOI 10.3386/w33817 ('The Experimental Selection Correction Estimator'). The ESC label is informal community shorthand, not the paper's title."
+    last_reviewed_by: "V. Cholette"
+    last_reviewed_date: 2026-05-25
+
+  - id: ml-who-to-nudge-author-list
+    wrong_credit:
+      authors: "Athey et al."
+      year: 2025
+      doi: null
+      surface_forms:
+        - "Athey et al. 2025 who to nudge"
+        - "Athey 2025 personalized policy"
+        - "Athey et al. (2025)"
+        - "Athey et al. 2024"
+    correct_credit:
+      authors: "Athey, Keleher & Spiess"
+      year: 2023
+      doi: null
+      arxiv_id: "2310.08672"
+      section: "arXiv 2310.08672, October 2023 (v2); full three-author attribution"
+    method: "ML for who-to-nudge / personalized policy learning"
+    evidence: "Full title 'Machine Learning Who to Nudge: Causal vs Predictive Targeting in a Field Experiment on Student Financial Aid Renewal' by Athey, Keleher & Spiess. arXiv v2 submitted October 12, 2023. The 'Athey et al. 2025' form is wrong on both year and author abbreviation; the 'Athey et al. 2024' form is wrong on year. Use full three-author attribution and the arXiv 2023 date."
+    confidence_level: strong
+    sources_of_claim:
+      - "Pillar workflow doc 2026-05-25 misattribution-traps line 87"
+      - "arXiv 2310.08672 (verified 2026-05-25)"
+    verification_notes: "Verified via arXiv API 2026-05-25. No CrossRef DOI located; remains preprint-only. Catalog originally cited 2024; corrected to 2023 to match arXiv v2 submission date. If/when journal publication appears, append journal DOI."
+    last_reviewed_by: "V. Cholette"
+    last_reviewed_date: 2026-05-25
+
+  - id: montiel-olea-first-author-name
+    wrong_credit:
+      authors: "Olea & Pflueger"
+      year: null
+      doi: null
+      surface_forms:
+        - "Olea & Pflueger"
+        - "Olea-Pflueger"
+        - "Olea, J. and Pflueger, C."
+    correct_credit:
+      authors: "Montiel Olea & Pflueger"
+      year: null
+      doi: null
+      section: "first-author surname is the compound 'Montiel Olea'"
+    method: "weak-instrument robust inference / effective F-statistic"
+    evidence: "The first author's surname is 'Montiel Olea' (compound surname). Citing as 'Olea & Pflueger' drops the first component. This is a structural surname misformatting, not a citation order error."
+    confidence_level: consensus
+    sources_of_claim:
+      - "Pillar workflow doc 2026-05-25 misattribution-traps line 88"
+    last_reviewed_by: "V. Cholette"
+    last_reviewed_date: 2026-05-25
+
+  - id: autor-wp-lead-author
+    wrong_credit:
+      authors: "Autor et al."
+      year: 2026
+      doi: null
+      surface_forms:
+        - "Autor et al. WP 34854"
+        - "Autor, Acemoglu, & Johnson"
+        - "Autor-Acemoglu-Johnson"
+    correct_credit:
+      authors: "Acemoglu, Autor & Johnson"
+      year: 2026
+      doi: "10.3386/w34854"
+      section: "NBER WP 34854, 'Building Pro-Worker Artificial Intelligence'; lead author is Acemoglu"
+    method: "AI labor displacement / pro-worker AI policy working paper"
+    evidence: "NBER WP 34854 'Building Pro-Worker Artificial Intelligence' (2026). Lead author is Acemoglu, not Autor. Author order matters in econ; the correct cite is Acemoglu-Autor-Johnson. The 'Autor et al.' surface form drops Acemoglu's lead position."
+    confidence_level: consensus
+    sources_of_claim:
+      - "Pillar workflow doc 2026-05-25 misattribution-traps line 89"
+      - "NBER direct verification 2026-05-25 (DOI 10.3386/w34854)"
+    verification_notes: "Verified directly at nber.org/papers/w34854 on 2026-05-25. Title confirmed: 'Building Pro-Worker Artificial Intelligence'. Author order: Daron Acemoglu, David Autor, Simon Johnson. Year 2026."
+    last_reviewed_by: "V. Cholette"
+    last_reviewed_date: 2026-05-25
+
+  - id: cunningham-context-is-scarce-tag
+    wrong_credit:
+      authors: "Cunningham"
+      year: null
+      doi: null
+      surface_forms:
+        - "Cunningham's 'context is scarce' tag"
+        - "Cunningham tag context-is-scarce"
+    correct_credit:
+      authors: "Cunningham"
+      year: null
+      doi: null
+      section: "recurring phrase in Causal Inference: The Mixtape, not a tagged concept"
+    method: "rhetorical phrase, not a formalism"
+    evidence: "'Context is scarce' is a recurring phrase in Cunningham's writing and lectures, not a named tag or technical term. Treating it as a tagged concept reifies a phrase into a method."
+    confidence_level: provisional
+    sources_of_claim:
+      - "Pillar workflow doc 2026-05-25 misattribution-traps line 90"
+    last_reviewed_by: "V. Cholette"
+    last_reviewed_date: 2026-05-25

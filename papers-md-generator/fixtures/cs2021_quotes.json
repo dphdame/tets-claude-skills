@@ -1,0 +1,19 @@
+{
+  "Callaway-Sant'Anna doubly-robust": [
+    {
+      "text": "ATT(g,t) is the average treatment effect for units who are members of a particular group g at a particular time period t.",
+      "section_id": "sec-2-2",
+      "quote_role": "estimator_name"
+    },
+    {
+      "text": "Assumption 3 restricts anticipation of the treatment for all eventually treated groups.",
+      "section_id": "sec-2-3",
+      "quote_role": "assumption_named:Assumption 3 (Limited Treatment Anticipation)"
+    },
+    {
+      "text": "Assumption 5 imposes conditional parallel trends between group g and groups that are not-yet-treated by time t plus delta.",
+      "section_id": "sec-2-3",
+      "quote_role": "assumption_named:Assumption 5 (Conditional Parallel Trends, not-yet-treated)"
+    }
+  ]
+}

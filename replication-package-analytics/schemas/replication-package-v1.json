@@ -1,0 +1,216 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://tooearlytosay.com/schemas/replication-package-v1.json",
+  "title": "Replication Package Landscape Metric Record (v1)",
+  "description": "Per-package static-analysis metric record produced by CAPABILITY-06. One JSON object per crawled replication package. Schema is versioned; any breaking change requires a v2 file and a side-by-side analysis.",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "package_id",
+    "crawl_date",
+    "source_repository",
+    "primary_language",
+    "language_share",
+    "folder_structure",
+    "readme",
+    "code_metrics",
+    "dependencies",
+    "measurement_notes",
+    "errors",
+    "warnings"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "const": "replication-package-v1",
+      "description": "Hardcoded schema identifier. Any value other than 'replication-package-v1' indicates a different schema."
+    },
+    "package_id": {
+      "type": "string",
+      "minLength": 1,
+      "description": "openICPSR project ID, DOI, or stable identifier for the package. Format examples: 'openicpsr/198765', '10.3886/E198765V1', 'aea/AEJApp/2024-01-vol16'."
+    },
+    "crawl_date": {
+      "type": "string",
+      "format": "date",
+      "description": "Date (YYYY-MM-DD) the package was downloaded and analyzed."
+    },
+    "source_repository": {
+      "type": "string",
+      "enum": [
+        "openicpsr",
+        "aea_data_repository",
+        "restat",
+        "journal_of_econometrics",
+        "journal_of_health_economics",
+        "zenodo",
+        "github",
+        "other"
+      ]
+    },
+    "package_metadata": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "deposit_year": { "type": ["integer", "null"], "minimum": 1990, "maximum": 2030 },
+        "associated_journal": { "type": ["string", "null"] },
+        "doi": { "type": ["string", "null"] },
+        "has_supplement": { "type": "boolean", "default": false },
+        "size_mb": { "type": ["number", "null"], "minimum": 0 },
+        "file_count": { "type": ["integer", "null"], "minimum": 0 }
+      }
+    },
+    "primary_language": {
+      "type": "string",
+      "enum": ["stata", "r", "python", "matlab", "julia", "sas", "mixed", "none"],
+      "description": "Language with highest LOC from cloc, with min 100 LOC to count. Ties broken alphabetically. 'mixed' reserved for cases where no single language clears 60% LOC share among contenders. 'none' for packages with no detected code."
+    },
+    "language_share": {
+      "type": "object",
+      "description": "LOC fraction per language. Only languages with >=100 LOC included. Shares sum to 1.0 within rounding.",
+      "patternProperties": {
+        "^(stata|r|python|matlab|julia|sas|other)$": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        }
+      },
+      "additionalProperties": false
+    },
+    "folder_structure": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["has_code_dir", "has_data_dir", "has_output_dir", "layout_score"],
+      "properties": {
+        "has_code_dir": { "type": "boolean", "description": "True if any top-level dir matches code|scripts|src|do|programs (case-insensitive)." },
+        "has_data_dir": { "type": "boolean", "description": "True if any top-level dir matches data|datasets|raw|input." },
+        "has_output_dir": { "type": "boolean", "description": "True if any top-level dir matches output|outputs|results|tables|figures|exhibits." },
+        "layout_score": { "type": "integer", "minimum": 0, "maximum": 3, "description": "Count of the three directory flags above that are true." }
+      }
+    },
+    "readme": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["present"],
+      "properties": {
+        "present": { "type": "boolean" },
+        "filename": { "type": ["string", "null"], "description": "Actual filename of the README detected, e.g., 'README.md', 'README.pdf', 'readme.txt'." },
+        "word_count": { "type": ["integer", "null"], "minimum": 0 },
+        "das_class": {
+          "type": ["string", "null"],
+          "enum": ["all_public", "public_with_scripts", "restricted_with_protocol", "opaque", null]
+        },
+        "das_class_confidence": { "type": ["number", "null"], "minimum": 0, "maximum": 1 },
+        "das_evidence_quote": { "type": ["string", "null"], "maxLength": 280 },
+        "das_prompt_version": { "type": ["string", "null"], "const": "das-classifier-v1" },
+        "has_software_versions": { "type": "boolean", "description": "Regex match against patterns like 'Stata 17', 'R 4.2.1', 'python==3.11', 'Matlab R2023a'." },
+        "has_runtime_estimate": { "type": "boolean", "description": "Regex match against time-phrase patterns: hours, minutes, overnight, HPC, days." },
+        "has_reproducibility_language": { "type": "boolean", "description": "Regex match for reproducibility|replication|reproduce." }
+      }
+    },
+    "code_metrics": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["loc_total"],
+      "properties": {
+        "loc_total": { "type": "integer", "minimum": 0 },
+        "loc_by_language": {
+          "type": "object",
+          "patternProperties": {
+            "^(stata|r|python|matlab|julia|sas|other)$": { "type": "integer", "minimum": 0 }
+          },
+          "additionalProperties": false
+        },
+        "has_master_script": { "type": "boolean", "description": "Filename heuristic only. Matches run_all*, master*, main*, Makefile, Snakefile, workflow*." },
+        "master_script_path": { "type": ["string", "null"] },
+        "seed_set_count": { "type": "integer", "minimum": 0, "description": "Count of regex matches for seed-setting calls per language. Lower bound." },
+        "seed_set_by_language": {
+          "type": "object",
+          "patternProperties": {
+            "^(stata|r|python|matlab|julia|sas)$": { "type": "integer", "minimum": 0 }
+          },
+          "additionalProperties": false
+        },
+        "hardcoded_paths_count": { "type": "integer", "minimum": 0, "description": "Count of regex matches for absolute paths (Unix and Windows patterns)." },
+        "hardcoded_paths_examples": {
+          "type": "array",
+          "items": { "type": "string" },
+          "maxItems": 10,
+          "description": "Up to 10 example matches with file path and line number."
+        }
+      }
+    },
+    "dependencies": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["has_version_pins", "version_pin_files"],
+      "properties": {
+        "has_version_pins": { "type": "boolean" },
+        "version_pin_files": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "renv.lock",
+              "requirements.txt",
+              "Pipfile.lock",
+              "environment.yml",
+              "poetry.lock",
+              "conda-lock.yml",
+              "Manifest.toml",
+              "DESCRIPTION",
+              "stata_packages.txt"
+            ]
+          },
+          "uniqueItems": true
+        },
+        "requirements_txt_has_pins": {
+          "type": ["boolean", "null"],
+          "description": "True if requirements.txt has at least one '==' pin. Null if file absent."
+        }
+      }
+    },
+    "measurement_notes": {
+      "type": "object",
+      "description": "Free-form per-package notes flagging known measurement-uncertainty bounds. Surfaces in the published post.",
+      "additionalProperties": false,
+      "properties": {
+        "stata_regex_uncertainty": { "type": ["string", "null"] },
+        "readme_parse_uncertainty": { "type": ["string", "null"] },
+        "language_classification_uncertainty": { "type": ["string", "null"] },
+        "general_notes": { "type": ["string", "null"] }
+      }
+    },
+    "errors": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["code", "message"],
+        "properties": {
+          "code": {
+            "type": "string",
+            "enum": [
+              "DOWNLOAD_FAILED",
+              "UNZIP_FAILED",
+              "FILE_TOO_LARGE",
+              "TOO_MANY_FILES",
+              "ENCODING_ERROR",
+              "CLOC_FAILED",
+              "DAS_CLASSIFIER_FAILED",
+              "DAS_JSON_INVALID",
+              "README_UNREADABLE"
+            ]
+          },
+          "message": { "type": "string" },
+          "file": { "type": ["string", "null"] }
+        }
+      }
+    },
+    "warnings": {
+      "type": "array",
+      "items": { "type": "string", "maxLength": 500 }
+    }
+  }
+}

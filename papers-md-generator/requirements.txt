@@ -1,0 +1,8 @@
+# papers-md-generator dependencies
+anthropic>=0.40.0
+requests>=2.31.0
+pyyaml>=6.0
+lxml>=5.0.0
+python-Levenshtein>=0.25.0
+# Optional: pytest for running the test suite
+pytest>=7.0.0

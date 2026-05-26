@@ -1,0 +1,36 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Virtualenvs
+venv/
+.venv/
+env/
+.env
+
+# Editor / OS
+.DS_Store
+.vscode/
+.idea/
+*.swp
+*~
+
+# Local config
+.config/
+*.local.yaml
+secrets.env
+
+# Skill working output
+replication-landscape/
+output/wayback-cache/
+output/*.tmp.json
+
+# Logs
+*.log

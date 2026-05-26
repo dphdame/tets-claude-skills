@@ -1,0 +1,333 @@
+# method-taxonomy-v1.yaml
+# Causal-inference method families for the TETS papers.md generator.
+# Each family carries: family_id, canonical_name, synonyms, canonical_origin,
+# related_families. The estimator_canonical_citation in any papers.md block
+# joins to canonical_origin here; surface forms in extracted text match
+# against the synonyms list.
+#
+# DOI fields that we cannot verify from memory carry "TODO: verify DOI"
+# with the closest-known identifier (arXiv, NBER WP) retained.
+#
+# Schema version 1.0. Seeded 2026-05-25.
+
+schema_version: "1.0"
+last_reviewed_by: "V. Cholette"
+last_reviewed_date: 2026-05-25
+
+families:
+
+  # ============================================================
+  # DIFFERENCE-IN-DIFFERENCES
+  # ============================================================
+
+  - family_id: did-twfe
+    canonical_name: "Two-way fixed effects difference-in-differences"
+    synonyms:
+      - "TWFE DiD"
+      - "two-way fixed effects"
+      - "static DiD"
+      - "canonical DiD"
+      - "standard difference-in-differences"
+      - "TWFE event study"
+      - "panel fixed effects DiD"
+      - "2x2 DiD generalized"
+    canonical_origin:
+      authors: "Ashenfelter & Card"
+      year: 1985
+      doi: "10.2307/1924810"
+      journal: "Review of Economics and Statistics, 67(4): 648"
+      title: "Using the Longitudinal Structure of Earnings to Estimate the Effect of Training Programs"
+      confidence_level: contested
+      verification_notes: "DOI 10.2307/1924810 verified via CrossRef 2026-05-25. Family-origin is contested: Ashenfelter-Card 1985 is the modal early-econ TWFE DiD reference, but variants trace to earlier biostatistics literature (per Roth-Sant'Anna-Bilinski-Poe 2023 §2 and Cunningham Mixtape 3rd ed Ch 9). This entry names the family; the misattribution-trap engine should surface all candidate originators per CAP-05 spec."
+    related_families:
+      - did-cs
+      - did-sa
+      - did-dcdh
+
+  - family_id: did-cs
+    canonical_name: "Callaway-Sant'Anna doubly-robust DiD"
+    synonyms:
+      - "CS DiD"
+      - "Callaway-Sant'Anna estimator"
+      - "group-time ATT"
+      - "ATT(g,t)"
+      - "doubly-robust DiD with not-yet-treated comparison"
+      - "did_multiplegt"
+      - "CS 2021"
+      - "Callaway and Sant'Anna 2021"
+    canonical_origin:
+      authors: "Callaway, B. & Sant'Anna, P. H. C."
+      year: 2021
+      doi: "10.1016/j.jeconom.2020.12.001"
+      journal: "Journal of Econometrics"
+    related_families:
+      - did-twfe
+      - did-sa
+      - did-dcdh
+
+  - family_id: did-sa
+    canonical_name: "Sun-Abraham interaction-weighted estimator"
+    synonyms:
+      - "SA 2021"
+      - "Sun and Abraham 2021"
+      - "interaction-weighted estimator"
+      - "IW estimator"
+      - "CATT cohort-relative parameter"
+      - "cohort-specific event study"
+      - "eventstudyinteract"
+      - "Sun-Abraham event study"
+    canonical_origin:
+      authors: "Sun, L. & Abraham, S."
+      year: 2021
+      doi: "10.1016/j.jeconom.2020.09.006"
+      journal: "Journal of Econometrics"
+    related_families:
+      - did-twfe
+      - did-cs
+      - did-dcdh
+
+  - family_id: did-dcdh
+    canonical_name: "de Chaisemartin-D'Haultfoeuille DID-multi"
+    synonyms:
+      - "dCDH"
+      - "de Chaisemartin and D'Haultfoeuille"
+      - "DIDmultipleGT"
+      - "DID-multi"
+      - "did_multiplegt_dyn"
+      - "switchers DiD"
+      - "fuzzy DiD"
+    canonical_origin:
+      authors: "de Chaisemartin, C. & D'Haultfoeuille, X."
+      year: 2020
+      doi: "10.1257/aer.20181169"
+      journal: "American Economic Review"
+    related_families:
+      - did-twfe
+      - did-cs
+      - did-sa
+
+  # ============================================================
+  # SYNTHETIC CONTROL
+  # ============================================================
+
+  - family_id: sc-classic
+    canonical_name: "Synthetic control method (Abadie)"
+    synonyms:
+      - "synthetic control"
+      - "SCM"
+      - "Abadie synthetic control"
+      - "ADH synthetic control"
+      - "Abadie-Diamond-Hainmueller"
+      - "donor pool weighted"
+      - "synth"
+    canonical_origin:
+      authors: "Abadie, A., Diamond, A. & Hainmueller, J."
+      year: 2010
+      doi: "10.1198/jasa.2009.ap08746"
+      journal: "Journal of the American Statistical Association"
+      note: "Original case-study formulation: Abadie & Gardeazabal 2003 AER (Basque terrorism). The 2010 JASA paper is the canonical methodological reference."
+    related_families:
+      - sc-sdid
+      - did-twfe
+
+  - family_id: sc-sdid
+    canonical_name: "Synthetic difference-in-differences"
+    synonyms:
+      - "sdid"
+      - "synthetic DiD"
+      - "Arkhangelsky synthetic DiD"
+      - "ADH-DiD hybrid"
+      - "unit weights and time weights"
+    canonical_origin:
+      authors: "Arkhangelsky, D., Athey, S., Hirshberg, D. A., Imbens, G. W. & Wager, S."
+      year: 2021
+      doi: "10.1257/aer.20190159"
+      journal: "American Economic Review"
+    related_families:
+      - sc-classic
+      - did-twfe
+      - did-cs
+
+  # ============================================================
+  # REGRESSION DISCONTINUITY
+  # ============================================================
+
+  - family_id: rd-sharp
+    canonical_name: "Sharp regression discontinuity"
+    synonyms:
+      - "sharp RD"
+      - "sharp regression discontinuity"
+      - "RDD sharp"
+      - "deterministic discontinuity"
+      - "Imbens-Lemieux RD"
+      - "Calonico-Cattaneo-Titiunik RD"
+      - "rdrobust"
+    canonical_origin:
+      authors: "Hahn, J., Todd, P. & van der Klaauw, W."
+      year: 2001
+      doi: "10.1111/1468-0262.00183"
+      journal: "Econometrica"
+      note: "Modern bandwidth-selection and robust-inference reference: Calonico, Cattaneo & Titiunik 2014 Econometrica, DOI 10.3982/ECTA11757."
+    related_families:
+      - rd-fuzzy
+      - iv-2sls
+
+  - family_id: rd-fuzzy
+    canonical_name: "Fuzzy regression discontinuity"
+    synonyms:
+      - "fuzzy RD"
+      - "fuzzy RDD"
+      - "fuzzy discontinuity"
+      - "probabilistic discontinuity"
+      - "RD with imperfect compliance"
+    canonical_origin:
+      authors: "Hahn, J., Todd, P. & van der Klaauw, W."
+      year: 2001
+      doi: "10.1111/1468-0262.00183"
+      journal: "Econometrica"
+      note: "Same paper as sharp RD introduces the fuzzy variant as a LATE-type estimand at the discontinuity."
+    related_families:
+      - rd-sharp
+      - iv-2sls
+
+  # ============================================================
+  # INSTRUMENTAL VARIABLES
+  # ============================================================
+
+  - family_id: iv-2sls
+    canonical_name: "Two-stage least squares instrumental variables"
+    synonyms:
+      - "2SLS"
+      - "TSLS"
+      - "two-stage least squares"
+      - "instrumental variables"
+      - "IV"
+      - "ivreg2"
+      - "ivregress"
+      - "Wald estimator (binary IV)"
+    canonical_origin:
+      authors: "Theil, H. (1953) / Basmann, R. L. (1957)"
+      year: 1953
+      doi: null
+      journal: "Theil 1953: 'Repeated Least-Squares Applied to Complete Equation Systems' (Central Planning Bureau memo, The Hague; pre-DOI literature, no DOI exists)"
+      confidence_level: contested
+      additional_candidates:
+        - authors: "Basmann, R. L."
+          year: 1957
+          doi: "10.2307/1907743"
+          title: "A Generalized Classical Method of Linear Estimation of Coefficients in a Structural Equation"
+          journal: "Econometrica, 25(1): 77"
+      modern_weak_iv_reference: "Montiel Olea & Pflueger 2013"
+      verification_notes: "Basmann 1957 DOI 10.2307/1907743 verified via CrossRef 2026-05-25. Theil 1953 is a Central Planning Bureau internal memo predating DOI infrastructure; no DOI exists or is recoverable. Attribution between Theil 1953 and Basmann 1957 has been contested in the IV literature since the 1960s; both are commonly cited as co-canonical. The misattribution-trap engine should surface both per CAP-05 spec."
+    related_families:
+      - iv-shift-share
+      - rd-fuzzy
+
+  - family_id: iv-shift-share
+    canonical_name: "Shift-share (Bartik) instrument"
+    synonyms:
+      - "shift-share IV"
+      - "Bartik instrument"
+      - "Bartik IV"
+      - "national-industry shift-share"
+      - "Borusyak-Hull-Jaravel shift-share"
+      - "Goldsmith-Pinkham-Sorkin-Swift Bartik"
+    canonical_origin:
+      authors: "Bartik, T. J."
+      year: 1991
+      doi: "10.17848/9780585223940"
+      isbn_cloth: "9780880991148"
+      isbn_paperback: "9780880991131"
+      isbn_ebook: "9780585223940"
+      publisher: "W.E. Upjohn Institute for Employment Research, Kalamazoo, MI"
+      title: "Who Benefits from State and Local Economic Development Policies?"
+      format: "book"
+      confidence_level: consensus
+      verification_notes: "Upjohn Institute ebook DOI 10.17848/9780585223940 verified via Upjohn Institute Press 2026-05-25. Book also has three ISBNs (cloth, paperback, ebook). Identification-conditions reference: Goldsmith-Pinkham, Sorkin & Swift 2020 AER 110(8): 2586-2624, DOI 10.1257/aer.20181047. Alternative identification: Borusyak, Hull & Jaravel 2022 ReStud."
+    related_families:
+      - iv-2sls
+
+  # ============================================================
+  # MACHINE LEARNING FOR CAUSAL INFERENCE
+  # ============================================================
+
+  - family_id: causal-forests
+    canonical_name: "Causal forests"
+    synonyms:
+      - "causal forests"
+      - "Wager-Athey causal forests"
+      - "honest random forest CATE"
+      - "Athey-Wager CATE estimator"
+      - "grf::causal_forest"
+    canonical_origin:
+      authors: "Wager, S. & Athey, S."
+      year: 2018
+      doi: "10.1080/01621459.2017.1319839"
+      journal: "Journal of the American Statistical Association"
+      note: "DO NOT confuse with Generalized Random Forests (Athey, Tibshirani & Wager 2019 Annals of Statistics, DOI 10.1214/18-AOS1709), which is a broader framework, not the introduction of causal forests."
+    related_families:
+      - bart-causal
+      - ml-who-to-nudge
+
+  - family_id: bart-causal
+    canonical_name: "Bayesian Additive Regression Trees for causal inference (BART/BCF)"
+    synonyms:
+      - "BART"
+      - "Bayesian Additive Regression Trees"
+      - "BCF"
+      - "Bayesian Causal Forests"
+      - "Hill BART causal"
+      - "Hahn-Murray-Carvalho BCF"
+    canonical_origin:
+      authors: "Hill, J. L."
+      year: 2011
+      doi: "10.1198/jcgs.2010.08162"
+      journal: "Journal of Computational and Graphical Statistics"
+      note: "BART itself: Chipman, George & McCulloch 2010 Annals of Applied Statistics. BCF extension: Hahn, Murray & Carvalho 2020 Bayesian Analysis."
+    related_families:
+      - causal-forests
+
+  - family_id: ml-who-to-nudge
+    canonical_name: "Machine-learning policy learning (who-to-nudge / who-to-treat)"
+    synonyms:
+      - "who to nudge"
+      - "who to treat"
+      - "personalized policy learning"
+      - "policy tree"
+      - "Athey-Wager policy learning"
+      - "ML-based treatment assignment"
+    canonical_origin:
+      authors: "Athey, S., Keleher, N. & Spiess, J."
+      year: 2023
+      doi: null
+      arxiv_id: "2310.08672"
+      title: "Machine Learning Who to Nudge: Causal vs Predictive Targeting in a Field Experiment on Student Financial Aid Renewal"
+      venue: "arXiv preprint (no journal DOI as of 2026-05-25)"
+      confidence_level: strong
+      verification_notes: "Verified via arXiv API 2026-05-25. arXiv 2310.08672v2 submitted October 12, 2023. DO NOT cite as 'Athey et al. 2025' or 'Athey et al. 2024' — both forms are misattribution traps. Use full three-author attribution Athey-Keleher-Spiess and arXiv 2023 date until journal publication appears."
+    related_families:
+      - causal-forests
+
+  # ============================================================
+  # LONG-RUN / SURROGATE METHODS
+  # ============================================================
+
+  - family_id: surrogate-index
+    canonical_name: "Surrogate index estimator"
+    synonyms:
+      - "surrogate index"
+      - "Athey-Chetty-Imbens-Kang surrogate"
+      - "ACIK surrogate index"
+      - "short-term surrogate for long-term outcome"
+    canonical_origin:
+      authors: "Athey, S., Chetty, R., Imbens, G. W. & Kang, H."
+      year: 2019
+      doi: "10.3386/w26463"
+      arxiv_id: "1603.09326"
+      journal_doi: "10.1093/restud/rdaf087"
+      title: "The Surrogate Index: Combining Short-Term Proxies to Estimate Long-Term Treatment Effects More Rapidly and Precisely"
+      venue: "NBER Working Paper 26463 (2019); published Review of Economic Studies (online Sep 30, 2025)"
+      confidence_level: consensus
+      verification_notes: "NBER DOI 10.3386/w26463 verified 2026-05-25. arXiv 1603.09326 is the 2016 origin preprint titled 'Estimating Treatment Effects using Multiple Surrogates: The Role of the Surrogate Score and the Surrogate Index'. Journal publication 2025 DOI 10.1093/restud/rdaf087 in Review of Economic Studies. DO NOT confuse with the three-author Athey-Chetty-Imbens 2020 paper (arXiv 2006.09676, 'Using Experiments to Correct for Selection in Observational Studies', informally called the ESC paper); that is a distinct method. The surrogate index proper is the four-author ACIK paper."
+    related_families:
+      - causal-forests
