@@ -163,9 +163,18 @@ def find_methods_sections(sections):
 
 
 def has_methods_div(root):
-    """True iff TEI has explicit <div type='methods'> tagging."""
-    nodes = root.xpath("//tei:div[@type='methods']", namespaces=TEI_NS)
-    return len(nodes) > 0
+    """True iff TEI has either an explicit <div type='methods'> or a head
+    matching the methods/theorem heuristic used by find_methods_sections.
+
+    GROBID 0.9.0-crf and earlier do not emit type attributes on body divs.
+    Falling back to head-text heuristic recovers methods sections from real
+    papers whose authors use natural language ("Estimation", "Identification
+    strategy", "Empirical framework") rather than the literal head "Methods".
+    """
+    if root.xpath("//tei:div[@type='methods']", namespaces=TEI_NS):
+        return True
+    sections = get_sections(root)
+    return len(find_methods_sections(sections)) > 0
 
 
 def get_references(root):
