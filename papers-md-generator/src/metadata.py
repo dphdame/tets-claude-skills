@@ -138,6 +138,47 @@ def fetch_datacite(doi, log):
     }
 
 
+OPENALEX_DOI_URL = "https://api.openalex.org/works/doi:{doi}"
+
+
+def fetch_openalex(doi, log):
+    """DOI-keyed OpenAlex lookup. Public API, no key required.
+
+    Returns dict on success, None on 404 or transport error.
+    Used as the second metadata source for cross-validation when
+    Semantic Scholar is unavailable.
+    """
+    url = OPENALEX_DOI_URL.format(doi=doi)
+    try:
+        r = requests.get(url, timeout=15,
+                         headers={"User-Agent": "tets-claude-skills/0.1 (mailto:hello@tooearlytosay.com)"})
+    except requests.RequestException as e:
+        log.append({"url": url, "status_code": None,
+                    "fetched_at": _utc_now(), "error": str(e)})
+        return None
+    log.append({"url": url, "status_code": r.status_code,
+                "fetched_at": _utc_now()})
+    if r.status_code != 200:
+        return None
+    j = r.json()
+    authors = [a["author"]["display_name"]
+               for a in (j.get("authorships") or [])
+               if a.get("author", {}).get("display_name")]
+    return {
+        "source": "openalex",
+        "title": j.get("title", ""),
+        "authors": authors,
+        "doi": (j.get("doi") or doi).replace("https://doi.org/", ""),
+        "year": str(j.get("publication_year", "")),
+        "journal": (j.get("primary_location") or {}).get("source", {}).get("display_name", "") or "",
+        "volume": str((j.get("biblio") or {}).get("volume", "") or ""),
+        "issue": str((j.get("biblio") or {}).get("issue", "") or ""),
+        "page": ((j.get("biblio") or {}).get("first_page", "") or "")
+                + (("-" + (j.get("biblio") or {}).get("last_page", ""))
+                    if (j.get("biblio") or {}).get("last_page") else ""),
+    }
+
+
 def fetch_semantic_scholar(doi, log, api_key=None):
     """DOI-keyed S2 lookup. Returns None on 403 (fallback) or 404."""
     url = S2_DOI_URL.format(doi=quote_plus(doi, safe="/"))
@@ -195,7 +236,14 @@ def resolve(doi_or_id, log):
     doi = normalize_doi(s)
     if not is_doi(doi):
         return None
+    # Cross-source order: CrossRef first (most coverage for econ DOIs),
+    # then OpenAlex (publicly accessible, used for cross-validation),
+    # then DataCite (covers ICPSR / Zenodo / dataset DOIs),
+    # then Semantic Scholar (v0.2 hook; currently 403'ing on issued keys).
     meta = fetch_crossref(doi, log)
+    if meta:
+        return meta
+    meta = fetch_openalex(doi, log)
     if meta:
         return meta
     meta = fetch_datacite(doi, log)

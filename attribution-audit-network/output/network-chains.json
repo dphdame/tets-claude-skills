@@ -1,8 +1,34 @@
 {
   "version": "0.1",
-  "build_date": "2026-05-25T21:04:37.512023+00:00",
+  "build_date": "2026-05-26T23:57:06.796439+00:00",
   "catalog_version": "1.0",
   "chains": [
+    {
+      "chain_id": "clf-mis-credited-to-rr",
+      "method": "ARP / C-LF conditional confidence sets",
+      "correct_origin": {
+        "openalex_id": "W2974915775",
+        "doi": "10.1093/restud/rdad004",
+        "authors": "Andrews, Roth & Pakes",
+        "year": 2023,
+        "title": "Inference for Linear Conditional Moment Inequalities"
+      },
+      "wrong_credit": {
+        "openalex_id": "W4320855218",
+        "doi": "10.1093/restud/rdad018",
+        "authors": "Rambachan & Roth",
+        "year": 2023,
+        "title": "A More Credible Approach to Parallel Trends"
+      },
+      "evidence_count": 50,
+      "confidence_level": "consensus",
+      "rank_score": 3.9318256327243257,
+      "catalog_evidence": "Conditional-CI machinery is Andrews-Roth-Pakes 2023 'Inference for Linear Conditional Moment Inequalities' (Review of Economic Studies, not Journal of Econometrics as earlier draft indicated). RR 2023 adopts it for honest-DiD inference under Delta-RM.",
+      "catalog_sources_of_claim": [
+        "honest-did/papers.md attribution map line 250",
+        "CrossRef DOI 10.1093/restud/rdad004 (verified 2026-05-25)"
+      ]
+    },
     {
       "chain_id": "flci-mis-credited-to-rr",
       "method": "fixed-length confidence interval (FLCI)",
@@ -20,9 +46,9 @@
         "year": 2023,
         "title": "A More Credible Approach to Parallel Trends"
       },
-      "evidence_count": 24,
+      "evidence_count": 49,
       "confidence_level": "strong",
-      "rank_score": 3.2188758248682006,
+      "rank_score": 3.912023005428146,
       "catalog_evidence": "FLCI machinery itself is Armstrong-Kolesar 2018 (Econometrica). RR 2023 adapts it for use with Delta-SD; cite both \u2014 RR for the honest-DiD application, Armstrong-Kolesar for FLCI methodology.",
       "catalog_sources_of_claim": [
         "honest-did/papers.md attribution map line 249",
@@ -46,13 +72,91 @@
         "year": 2021,
         "title": "Estimating dynamic treatment effects in event studies with heterogeneous treatment effects"
       },
-      "evidence_count": 22,
+      "evidence_count": 44,
       "confidence_level": "consensus",
-      "rank_score": 3.1354942159291497,
+      "rank_score": 3.8066624897703196,
       "catalog_evidence": "Sun-Abraham uses never-treated or last-to-be-treated as the comparison; the not-yet-treated comparison-group construction is CS 2021 Assumption 5.",
       "catalog_sources_of_claim": [
         "honest-did/papers.md cross-paper attribution map line 235",
         "Roth-Sant'Anna-Bilinski-Poe 2023 (JoE) \u00a73.3 taxonomy of estimators"
+      ]
+    },
+    {
+      "chain_id": "cs-dr-estimator-mis-credited-to-sa",
+      "method": "doubly-robust estimator for ATT(g,t)",
+      "correct_origin": {
+        "openalex_id": "W3113269512",
+        "doi": "10.1016/j.jeconom.2020.12.001",
+        "authors": "Callaway & Sant'Anna",
+        "year": 2021,
+        "title": "Difference-in-Differences with multiple time periods"
+      },
+      "wrong_credit": {
+        "openalex_id": "W3112066496",
+        "doi": "10.1016/j.jeconom.2020.09.006",
+        "authors": "Sun & Abraham",
+        "year": 2021,
+        "title": "Estimating dynamic treatment effects in event studies with heterogeneous treatment effects"
+      },
+      "evidence_count": 44,
+      "confidence_level": "consensus",
+      "rank_score": 3.8066624897703196,
+      "catalog_evidence": "Sun-Abraham's interaction-weighted estimator is NOT doubly-robust; the DR identifying functional with propensity-score and outcome-regression representations is CS 2021.",
+      "catalog_sources_of_claim": [
+        "honest-did/papers.md attribution map line 236",
+        "Callaway & Sant'Anna 2021 \u00a72.4"
+      ]
+    },
+    {
+      "chain_id": "roth-2022-mis-credited-as-sensitivity-framework",
+      "method": "sensitivity analysis under parallel-trends violations (Delta-RM, Delta-SD, breakdown M, FLCI, ARP)",
+      "correct_origin": {
+        "openalex_id": "W4320855218",
+        "doi": "10.1093/restud/rdad018",
+        "authors": "Rambachan & Roth",
+        "year": 2023,
+        "title": "A More Credible Approach to Parallel Trends"
+      },
+      "wrong_credit": {
+        "openalex_id": "W4293761886",
+        "doi": "10.1257/aeri.20210236",
+        "authors": "Roth",
+        "year": 2022,
+        "title": "Pretest with Caution: Event-Study Estimates after Testing for Parallel Trends"
+      },
+      "evidence_count": 38,
+      "confidence_level": "consensus",
+      "rank_score": 3.6635616461296463,
+      "catalog_evidence": "Roth 2022 is the pretest-bias diagnostic critique; the constructive sensitivity framework with restriction sets on differential trends is Rambachan-Roth 2023.",
+      "catalog_sources_of_claim": [
+        "honest-did/papers.md attribution map lines 245-249",
+        "Rambachan & Roth 2023 abstract"
+      ]
+    },
+    {
+      "chain_id": "rr-2023-mis-credited-with-pretest-bias-claim",
+      "method": "low power of pre-trends tests; conditional-on-pretest distortion",
+      "correct_origin": {
+        "openalex_id": "W4293761886",
+        "doi": "10.1257/aeri.20210236",
+        "authors": "Roth",
+        "year": 2022,
+        "title": "Pretest with Caution: Event-Study Estimates after Testing for Parallel Trends"
+      },
+      "wrong_credit": {
+        "openalex_id": "W4320855218",
+        "doi": "10.1093/restud/rdad018",
+        "authors": "Rambachan & Roth",
+        "year": 2023,
+        "title": "A More Credible Approach to Parallel Trends"
+      },
+      "evidence_count": 31,
+      "confidence_level": "consensus",
+      "rank_score": 3.4657359027997265,
+      "catalog_evidence": "The pretest-bias and low-power diagnostic is Roth 2022 (AER:Insights). RR 2023 cites Roth 2022 but does not derive the diagnostic itself.",
+      "catalog_sources_of_claim": [
+        "honest-did/papers.md attribution map lines 243-244",
+        "Roth 2022 AER:Insights"
       ]
     },
     {

@@ -44,8 +44,8 @@ from lib.catalog_loader import (  # noqa: E402
     actionable_entries,
     CATALOG_PATH,
     TAXONOMY_PATH,
-    PROJECT_ROOT,
 )
+PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent
 from lib.network_expander import (  # noqa: E402
     expand_catalog_entry_pair,
     AttributionExpander,
