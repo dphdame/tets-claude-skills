@@ -239,7 +239,9 @@ def resolve(doi_or_id, log):
     # Cross-source order: CrossRef first (most coverage for econ DOIs),
     # then OpenAlex (publicly accessible, used for cross-validation),
     # then DataCite (covers ICPSR / Zenodo / dataset DOIs),
-    # then Semantic Scholar (v0.2 hook; currently 403'ing on issued keys).
+    # then Semantic Scholar (only useful with a valid key — the unauthenticated
+    # tier IP-throttles too aggressively for pipeline use, returning 429 with
+    # no Retry-After header even after 60s backoff).
     meta = fetch_crossref(doi, log)
     if meta:
         return meta
